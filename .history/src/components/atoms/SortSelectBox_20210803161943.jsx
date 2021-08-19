@@ -1,0 +1,33 @@
+import React from "react";
+import InputLabel from "@material-ui/core/InputLabel";
+import MenuItem from "@material-ui/core/MenuItem";
+import Select from "@material-ui/core/Select";
+import FormControl from "@material-ui/core/FormControl";
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles((theme) => ({
+  sortSelect: {
+    width: "200px",
+    marginLeft: "70%",
+  },
+}));
+
+export const SortSelectBox = (props) => {
+  const classes = useStyles();
+
+  return (
+    <FormControl className={classes.sortSelect} dense="normal">
+      <InputLabel id="demo-simple-select-label">並び替え</InputLabel>
+      <Select
+        labelId="demo-simple-select-label"
+        id="demo-simple-select"
+        value={props.value}
+        onChange={props.onChange}
+      >
+        <MenuItem value={"10"}>番号順</MenuItem>
+        <MenuItem value={"20"}>難易度順</MenuItem>
+        <MenuItem value={"30"}>難易度１</MenuItem>
+      </Select>
+    </FormControl>
+  );
+};
