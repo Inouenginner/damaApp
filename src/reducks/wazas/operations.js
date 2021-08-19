@@ -104,7 +104,7 @@ export const signIn = (name) => {
             const wazaSum = 200;
             let num = 1;
             while (num <= wazaSum) {
-                let detailsRef = db.collection('details').doc(userId).toString().collection('results').doc(num.toString());
+                let detailsRef = db.collection('details').doc(userId.toString()).collection('results').doc(num.toString());
                 batch.set(detailsRef, { id:num, achieve: "", memo: "", favorite: false, makeDay: timestamp});
                 num++;
             }
