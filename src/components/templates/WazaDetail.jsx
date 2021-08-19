@@ -23,7 +23,6 @@ export const WazaDetail = () => {
   const wazaList = getWazas(selector);
   const userId = getUserId(selector);
   const targetWaza = wazaList[wazaId - 1];
-  console.log(targetWaza);
 
   const isFavorite = targetWaza.favorite === true;
   const [achieve, setAchieve] = useState(targetWaza.achieve),

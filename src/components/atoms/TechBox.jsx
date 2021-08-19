@@ -25,6 +25,8 @@ const useStyles = makeStyles({
   bg3: {
     flex: "flexWrap",
     backgroundColor: "green",
+    width: "150px",
+    height: "150px",
     position: "relative",
   },
   bg4: {

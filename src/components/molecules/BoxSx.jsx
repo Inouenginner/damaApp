@@ -55,27 +55,27 @@ export default function BoxSx(props) {
       break;
     case "50":
       wazas = wazas.filter((waza) => {
-        return waza.level === 1;
+        return waza.level === "1";
       });
       break;
     case "60":
       wazas = wazas.filter((waza) => {
-        return waza.level === 2;
+        return waza.level === "2";
       });
       break;
     case "70":
       wazas = wazas.filter((waza) => {
-        return waza.level === 3;
+        return waza.level === "3";
       });
       break;
     case "80":
       wazas = wazas.filter((waza) => {
-        return waza.level === 4;
+        return waza.level === "4";
       });
       break;
     case "90":
       wazas = wazas.filter((waza) => {
-        return waza.level === 5;
+        return waza.level === "5";
       });
       break;
     case "100":

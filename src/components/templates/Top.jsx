@@ -6,6 +6,7 @@ import Grid from "@material-ui/core/Grid";
 import { NameInput } from "../atoms/NameInput";
 import { LoginButton } from "../atoms/LoginButton";
 import { makeStyles } from "@material-ui/core/styles";
+import { push } from "connected-react-router";
 
 const useStyles = makeStyles((theme) => ({
   text: {
@@ -19,20 +20,19 @@ const useStyles = makeStyles((theme) => ({
 export const Top = () => {
   const classes = useStyles();
   const dispatch = useDispatch();
-  const goRecord = useCallback((name) => {
-    dispatch(signIn(name));
-    //eslint-disable-next-line
-  }, []);
 
   const [name, setName] = useState("");
-
-  //関数のメモ化
   const nameChange = useCallback(
     (event) => {
       setName(event.target.value);
     },
     [setName]
   );
+  const goRecord = useCallback((name) => {
+    dispatch(signIn(name));
+    dispatch(push("/record"));
+    //eslint-disable-next-line
+  }, []);
 
   return (
     <Container maxWidth="sm" spacing={3}>

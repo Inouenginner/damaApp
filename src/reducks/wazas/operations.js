@@ -23,7 +23,6 @@ export const updateDetail = (achieve,memo,favorite, wazaId, userId) => {
         nextDetails[wazaId - 1]["memo"] = memo;
         nextDetails[wazaId - 1]["favorite"] = favorite;
         nextDetails[wazaId - 1]["makeDay"] = timestamp;
-        console.log(nextDetails[wazaId - 1]);
         dispatch(uploadWazaInfo(nextDetails));
         dispatch(push('/record'))
     }
@@ -35,29 +34,22 @@ export const signIn = (name) => {
         let sameIdUserData ;
         let maxId;
         let userId;
-     //   let wazas;
-        
-        //技の登録
-        //wazaRegist();
+//     　　let wazas;
+//         //技の登録（アプリ立ち上げ時に一度読み込むもの）
 //         await axios.get("http://localhost:3000/wazas")
 //         .then(res => {
 //             wazas = res.data;
 //             console.log(wazas);
 //         })
-//         console.log("うんち"+wazas[0])
-//         console.log("うんち"+wazas[0]["waza"])
-//         const result = wazas.find(item => item.id === 2); // idが2の要素を返す
-//         console.log(result); // { id: 2, name: 'ジョーダン', sex: '男性' }
 //         let batch = db.batch();
 //         const wazaRef = db.collection('wazas');
-//         // //各技のユーザごとの達成度等詳細データベース設定
+//         // 技データベース設定
 //         wazas.forEach(function(waza, index) {
 //             let wazaEachRef = wazaRef.doc((index + 1).toString());
 //             batch.set(wazaEachRef, { id: waza["id"],　waza:waza["waza"], favoiteSum: waza["favoriteSum"], level: waza["level"], makeSum: waza["makeSum"], url:waza["url"]});
 //         });
 // 　 　    // バッチ処理の完了を宣言
 //         await batch.commit();
-
 
         //valid
         if(name === "") {
@@ -102,11 +94,11 @@ export const signIn = (name) => {
             const detailsRef = db.collection('details').doc(userId.toString());
             batch.set(detailsRef, {});
             const wazaSum = 200;
-            let num = 1;
-            while (num <= wazaSum) {
-                let detailsRef = db.collection('details').doc(userId.toString()).collection('results').doc(num.toString());
-                batch.set(detailsRef, { id:num, achieve: "", memo: "", favorite: false, makeDay: timestamp});
-                num++;
+            let index = 1;
+            while (index <= wazaSum) {
+                let detailsRef = db.collection('details').doc(userId.toString()).collection('results').doc(index.toString());
+                batch.set(detailsRef, { id:index, achieve: "", memo: "", favorite: false, makeDay: timestamp});
+                index++;
             }
             // バッチ処理の完了
             await batch.commit();
@@ -142,7 +134,5 @@ export const signIn = (name) => {
         users["isSignedIn"] = true;
         users["isLoading"] = false;
         dispatch(initUserAction(users));
-
-        dispatch(push("/record"));
     }
 }
