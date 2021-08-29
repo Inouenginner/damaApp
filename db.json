@@ -4,7 +4,7 @@
             "id": 1,
             "waza":"レジェンド(飛行機～はやて中皿～天中殺)",
             "favoriteSum":4,
-            "level":"1",
+            "level":1,
             "makeSum":10,
             "url":"aiueo"
         },
@@ -12,7 +12,7 @@
             "id": 2,
             "waza":"吊るしとめけん〜持ち替え〜はねけん",
             "favoriteSum":0,
-            "level":"1",
+            "level":1,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -20,7 +20,7 @@
             "id": 3,
             "waza":"ふりけん～世界一周～地球回し",
             "favoriteSum":0,
-            "level":"1",
+            "level":1,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -28,7 +28,7 @@
             "id": 4,
             "waza":"灯台〜灯台とんぼ返り〜逆落とし",
             "favoriteSum":0,
-            "level":"2",
+            "level":2,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -36,7 +36,7 @@
             "id": 5,
             "waza":"空中ブランコ～天中殺～地獄回し",
             "favoriteSum":0,
-            "level":"2",
+            "level":2,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -44,7 +44,7 @@
             "id": 6,
             "waza":"月に落ちたUFO（月面～逆落とし～UFO",
             "favoriteSum":0,
-            "level":"2",
+            "level":2,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -52,7 +52,7 @@
             "id": 7,
             "waza":"天中殺〜倒立〜持ち替えけん",
             "favoriteSum":0,
-            "level":"2",
+            "level":2,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -60,7 +60,7 @@
             "id": 8,
             "waza":"フリップ大皿〜中皿〜遠心力〜持ち替え中皿〜天中殺",
             "favoriteSum":0,
-            "level":"2",
+            "level":2,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -68,7 +68,7 @@
             "id": 9,
             "waza":"裏けん先〜飛竜上りけん",
             "favoriteSum":0,
-            "level":"2",
+            "level":2,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -76,7 +76,7 @@
             "id": 10,
             "waza":"吊るし灯台〜すくいけん〜中皿〜けん",
             "favoriteSum":0,
-            "level":"2",
+            "level":2,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -84,7 +84,7 @@
             "id": 11,
             "waza":"忍者(日本一周～持ち替え～持ち替え中皿～天中殺)",
             "favoriteSum":0,
-            "level":"2",
+            "level":2,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -92,7 +92,7 @@
             "id": 12,
             "waza":"くるくる月面〜逆落とし〜ゼロはねけん",
             "favoriteSum":0,
-            "level":"2",
+            "level":2,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -100,7 +100,7 @@
             "id": 13,
             "waza":"1回転飛行機〜1.5とめけん〜ワールウィンド",
             "favoriteSum":0,
-            "level":"4",
+            "level":4,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -108,7 +108,7 @@
             "id": 14,
             "waza":"うぐいす〜こっくり〜谷渡り〜回転けん",
             "favoriteSum":0,
-            "level":"2",
+            "level":2,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -116,7 +116,7 @@
             "id": 15,
             "waza":"飛行機〜倒立〜天中殺",
             "favoriteSum":0,
-            "level":"2",
+            "level":2,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -124,7 +124,7 @@
             "id": 16,
             "waza":"前振りろうそく〜ろうそく返し〜地球回し",
             "favoriteSum":0,
-            "level":"2",
+            "level":2,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -132,7 +132,7 @@
             "id": 17,
             "waza":"1回転灯台〜月面着陸〜1回転逆落とし",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -140,7 +140,7 @@
             "id": 18,
             "waza":"宇宙遊泳〜灯台インスタけん",
             "favoriteSum":0,
-            "level":"4",
+            "level":4,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -148,7 +148,7 @@
             "id": 19,
             "waza":"中皿フリップ中皿〜天中殺〜バックスルー天中",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -156,7 +156,7 @@
             "id": 20,
             "waza":"裏月面〜裏倒立〜裏逆落とし",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -164,7 +164,7 @@
             "id": 21,
             "waza":"月についた侍(月面～竹馬～天中殺)",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -172,7 +172,7 @@
             "id": 22,
             "waza":"風車ふりけん〜裏地球回し〜風車地球回し",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -180,7 +180,7 @@
             "id": 23,
             "waza":"ジャグ大皿〜ターンテーブル〜大皿返し",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -188,7 +188,7 @@
             "id": 24,
             "waza":"ポップコーン〜バルタン星人〜小指姫",
             "favoriteSum":0,
-            "level":"2",
+            "level":2,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -196,7 +196,7 @@
             "id": 25,
             "waza":"中皿遠心力灯台〜すくいけんファストハンド",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -204,7 +204,7 @@
             "id": 26,
             "waza":"振りうぐいす〜回転うぐいす〜回転けん",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -212,7 +212,7 @@
             "id": 27,
             "waza":"飛行機〜はやてろうそく〜天中殺",
             "favoriteSum":0,
-            "level":"2",
+            "level":2,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -220,7 +220,7 @@
             "id": 28,
             "waza":"天中ファストハンド〜はねけん天中〜スクリュー",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -228,7 +228,7 @@
             "id": 29,
             "waza":"タップ中皿〜倒立〜持ち替えけん",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -236,7 +236,7 @@
             "id": 30,
             "waza":"ジャグ天中〜灯台インスタ天中〜ジャグ天中",
             "favoriteSum":0,
-            "level":"5",
+            "level":5,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -244,7 +244,7 @@
             "id": 31,
             "waza":"横バィーン〜持ち替え中皿〜ペンギンけん",
             "favoriteSum":0,
-            "level":"2",
+            "level":2,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -252,7 +252,7 @@
             "id": 32,
             "waza":"居合い鶯〜谷渡り〜裏回転けん",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -260,7 +260,7 @@
             "id": 33,
             "waza":"アンダーバード〜逆落とし〜はねけん",
             "favoriteSum":0,
-            "level":"2",
+            "level":2,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -268,7 +268,7 @@
             "id": 34,
             "waza":"吊るし天中〜ガンマン〜地球回し",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -276,7 +276,7 @@
             "id": 35,
             "waza":"ずーまキャッチ〜中皿フリップ中皿〜逆落とし",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -284,7 +284,7 @@
             "id": 36,
             "waza":"タップ灯台〜一回転逆落とし〜1.5とめけん",
             "favoriteSum":0,
-            "level":"4",
+            "level":4,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -292,7 +292,7 @@
             "id": 37,
             "waza":"すくいけん〜無回転灯台〜すくいけん",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -300,7 +300,7 @@
             "id": 38,
             "waza":"月面〜月面とんぼ返り〜逆落としファストハンド",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -308,7 +308,7 @@
             "id": 39,
             "waza":"魔女のスープ〜中皿よそい〜いただきます",
             "favoriteSum":0,
-            "level":"1",
+            "level":1,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -316,7 +316,7 @@
             "id": 40,
             "waza":"宇宙遊泳一回転灯台〜フリップ灯台〜タップイン",
             "favoriteSum":0,
-            "level":"4",
+            "level":4,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -324,7 +324,7 @@
             "id": 41,
             "waza":"一回転飛行機〜裏はねけん〜はねけん",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -332,7 +332,7 @@
             "id": 42,
             "waza":"中皿極意〜極意渡り〜回転けん",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -340,7 +340,7 @@
             "id": 43,
             "waza":"こねくり〜Sweets スペシャル〜天中殺",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -348,7 +348,7 @@
             "id": 44,
             "waza":"空中ブランコ～もしかめ3回～野球",
             "favoriteSum":0,
-            "level":"1",
+            "level":1,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -356,7 +356,7 @@
             "id": 45,
             "waza":"天中ファストハンド〜持ち替えペンギンけん",
             "favoriteSum":0,
-            "level":"2",
+            "level":2,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -364,7 +364,7 @@
             "id": 46,
             "waza":"とめけん～竹とんぼ～持ち替え",
             "favoriteSum":0,
-            "level":"1",
+            "level":1,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -372,7 +372,7 @@
             "id": 47,
             "waza":"竹馬～倒立～持ち替えけん",
             "favoriteSum":0,
-            "level":"2",
+            "level":2,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -380,7 +380,7 @@
             "id": 48,
             "waza":"除夜の鐘～ご挨拶～お年玉",
             "favoriteSum":0,
-            "level":"1",
+            "level":1,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -388,7 +388,7 @@
             "id": 49,
             "waza":"フリップ灯台〜インスタとんぼ返り〜タップ1回転逆落とし",
             "favoriteSum":0,
-            "level":"4",
+            "level":4,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -396,7 +396,7 @@
             "id": 50,
             "waza":"おみこし〜おすべり〜天中殺",
             "favoriteSum":0,
-            "level":"1",
+            "level":1,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -404,7 +404,7 @@
             "id": 51,
             "waza":"ペンギン中皿〜大皿〜けん",
             "favoriteSum":0,
-            "level":"1",
+            "level":1,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -412,7 +412,7 @@
             "id": 52,
             "waza":"振り小皿鶯〜こっくり〜ペンギンけん",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -420,7 +420,7 @@
             "id": 53,
             "waza":"けん先滑り〜裏けんさき滑り",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -428,7 +428,7 @@
             "id": 54,
             "waza":"一回転灯台～中皿～倒立～すくいけん",
             "favoriteSum":0,
-            "level":"2",
+            "level":2,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -436,7 +436,7 @@
             "id": 55,
             "waza":"ふりけん〜ふりけん〜地球回し",
             "favoriteSum":0,
-            "level":"2",
+            "level":2,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -444,7 +444,7 @@
             "id": 56,
             "waza":"風車大皿〜ターンテーブル〜けん",
             "favoriteSum":0,
-            "level":"2",
+            "level":2,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -452,7 +452,7 @@
             "id": 57,
             "waza":"飛行機〜うずしお空中ブランコ",
             "favoriteSum":0,
-            "level":"2",
+            "level":2,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -460,7 +460,7 @@
             "id": 58,
             "waza":"フリップとめけん〜フリップ〜Wフリップ",
             "favoriteSum":0,
-            "level":"4",
+            "level":4,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -468,7 +468,7 @@
             "id": 59,
             "waza":"大皿〜持ち替え中皿〜小皿〜持ち替え中皿〜持ち替え中皿〜天中殺",
             "favoriteSum":0,
-            "level":"2",
+            "level":2,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -476,7 +476,7 @@
             "id": 60,
             "waza":"Wフリップ〜2ジャグ〜2回転逆落とし",
             "favoriteSum":0,
-            "level":"5",
+            "level":5,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -484,7 +484,7 @@
             "id": 61,
             "waza":"すくいけん〜バックスルーはやて中皿〜ゴースト逆落とし",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -492,7 +492,7 @@
             "id": 62,
             "waza":"竹馬〜逆落としファストハンド〜一回転逆落とし",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -500,7 +500,7 @@
             "id": 63,
             "waza":"ろうそく〜リフティング小皿〜ろうそく一周",
             "favoriteSum":0,
-            "level":"2",
+            "level":2,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -508,7 +508,7 @@
             "id": 64,
             "waza":"デンマーク一周(大皿～フリップ小皿～逆落とし～はやて中皿～天中殺)",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -516,7 +516,7 @@
             "id": 65,
             "waza":"ふりけん〜ゴースト灯台〜持ち替えけん",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -524,7 +524,7 @@
             "id": 66,
             "waza":"大皿〜Bダッシュ〜つばめ返し",
             "favoriteSum":0,
-            "level":"1",
+            "level":1,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -532,7 +532,7 @@
             "id": 67,
             "waza":"裏振りうぐいす〜うぐいすの谷渡り〜天中殺",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -540,7 +540,7 @@
             "id": 68,
             "waza":"フリップ灯台〜１回転逆落とし〜はねけん",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -548,7 +548,7 @@
             "id": 69,
             "waza":"中皿〜月面〜逆落とし",
             "favoriteSum":0,
-            "level":"2",
+            "level":2,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -556,7 +556,7 @@
             "id": 70,
             "waza":"アンダーバード〜天中ファストハンド〜2回転はねけん",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -564,7 +564,7 @@
             "id": 71,
             "waza":"飛行機〜持ち替え〜地球回し",
             "favoriteSum":0,
-            "level":"1",
+            "level":1,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -572,7 +572,7 @@
             "id": 72,
             "waza":"マテオチャンス(フリップジャグフリップジャグけん)",
             "favoriteSum":0,
-            "level":"5",
+            "level":5,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -580,7 +580,7 @@
             "id": 73,
             "waza":"１回転飛行機〜倒立〜１回転持ち替えけん",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -588,7 +588,7 @@
             "id": 74,
             "waza":"天中殺〜中皿〜天中殺〜地獄回し",
             "favoriteSum":0,
-            "level":"2",
+            "level":2,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -596,7 +596,7 @@
             "id": 75,
             "waza":"竹馬〜けん〜裏地球回し",
             "favoriteSum":0,
-            "level":"2",
+            "level":2,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -604,7 +604,7 @@
             "id": 76,
             "waza":"月面〜月面とんぼ返り〜一回転逆落とし",
             "favoriteSum":0,
-            "level":"2",
+            "level":2,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -612,7 +612,7 @@
             "id": 77,
             "waza":"ジャグ大皿〜うぐいす〜すくいけん",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -620,7 +620,7 @@
             "id": 78,
             "waza":"中皿極意〜UFO〜はねけん",
             "favoriteSum":0,
-            "level":"4",
+            "level":4,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -628,7 +628,7 @@
             "id": 79,
             "waza":"飛龍〜持ち替え中皿〜天中",
             "favoriteSum":0,
-            "level":"2",
+            "level":2,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -636,7 +636,7 @@
             "id": 80,
             "waza":"裏世界一周(小皿月面～月面～倒立～逆落とし)",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -644,7 +644,7 @@
             "id": 81,
             "waza":"金魚すくい〜持ち替えろうそく〜ろうそく返し",
             "favoriteSum":0,
-            "level":"2",
+            "level":2,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -652,7 +652,7 @@
             "id": 82,
             "waza":"裏月面〜１回転クッション月面〜裏逆落とし",
             "favoriteSum":0,
-            "level":"4",
+            "level":4,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -660,7 +660,7 @@
             "id": 83,
             "waza":"ブリッジ〜エレベーターすくいけん〜持ち替え",
             "favoriteSum":0,
-            "level":"1",
+            "level":1,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -668,7 +668,7 @@
             "id": 84,
             "waza":"てんとう虫〜つばめ返し〜けん",
             "favoriteSum":0,
-            "level":"2",
+            "level":2,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -676,7 +676,7 @@
             "id": 85,
             "waza":"被せ灯台〜バンジーゴースト灯台〜すくいけんペンギンファスト",
             "favoriteSum":0,
-            "level":"4",
+            "level":4,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -684,7 +684,7 @@
             "id": 86,
             "waza":"裏飛行機〜１回転月面〜１回転持ち替えけん",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -692,7 +692,7 @@
             "id": 87,
             "waza":"犬のしつけ",
             "favoriteSum":0,
-            "level":"1",
+            "level":1,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -700,7 +700,7 @@
             "id": 88,
             "waza":"スワップ飛行機〜1.5うぐいす〜インワードけん",
             "favoriteSum":0,
-            "level":"5",
+            "level":5,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -708,7 +708,7 @@
             "id": 89,
             "waza":"リフティング大皿〜遠心力裏月〜天中殺",
             "favoriteSum":0,
-            "level":"4",
+            "level":4,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -716,7 +716,7 @@
             "id": 90,
             "waza":"フリップ大皿〜インワード大皿〜フリップけん",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -724,7 +724,7 @@
             "id": 91,
             "waza":"飛行機～ダーティーフィンガー灯台～1回転逆落とし",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -732,7 +732,7 @@
             "id": 92,
             "waza":"すくいけん〜トーキル〜１回転タップすくいけん",
             "favoriteSum":0,
-            "level":"4",
+            "level":4,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -740,7 +740,7 @@
             "id": 93,
             "waza":"月面〜裏インスタ月面トンボ返り〜逆落としファストハンド",
             "favoriteSum":0,
-            "level":"4",
+            "level":4,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -748,7 +748,7 @@
             "id": 94,
             "waza":"たこ焼き一丁〜中皿〜持ち灯台",
             "favoriteSum":0,
-            "level":"1",
+            "level":1,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -756,7 +756,7 @@
             "id": 95,
             "waza":"銀河系一周",
             "favoriteSum":0,
-            "level":"4",
+            "level":4,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -764,7 +764,7 @@
             "id": 96,
             "waza":"ジャグけん〜ワールウィンド〜地球回し",
             "favoriteSum":0,
-            "level":"4",
+            "level":4,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -772,7 +772,7 @@
             "id": 97,
             "waza":"中皿〜天中殺〜地獄ぐるまファストハンド",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -780,7 +780,7 @@
             "id": 98,
             "waza":"2回転大皿〜インワード持ち替え中皿〜逆落とし",
             "favoriteSum":0,
-            "level":"4",
+            "level":4,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -788,7 +788,7 @@
             "id": 99,
             "waza":"3回転フリップ灯台〜3ジャグけん〜3回転ワールウィンド",
             "favoriteSum":0,
-            "level":"5",
+            "level":5,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -796,7 +796,7 @@
             "id": 100,
             "waza":"レジェンド〜持ち替え〜YANK",
             "favoriteSum":0,
-            "level":"2",
+            "level":2,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -804,7 +804,7 @@
             "id": 101,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -812,7 +812,7 @@
             "id": 102,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -820,7 +820,7 @@
             "id": 103,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -828,7 +828,7 @@
             "id": 104,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -836,7 +836,7 @@
             "id": 105,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -844,7 +844,7 @@
             "id": 106,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -852,7 +852,7 @@
             "id": 107,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -860,7 +860,7 @@
             "id": 108,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -868,7 +868,7 @@
             "id": 109,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -876,7 +876,7 @@
             "id": 110,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -884,7 +884,7 @@
             "id": 111,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -892,7 +892,7 @@
             "id": 112,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -900,7 +900,7 @@
             "id": 113,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -908,7 +908,7 @@
             "id": 114,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -916,7 +916,7 @@
             "id": 115,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -924,7 +924,7 @@
             "id": 116,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -932,7 +932,7 @@
             "id": 117,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -940,7 +940,7 @@
             "id": 118,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -948,7 +948,7 @@
             "id": 119,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -956,7 +956,7 @@
             "id": 120,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -964,7 +964,7 @@
             "id": 121,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -972,7 +972,7 @@
             "id": 122,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -980,7 +980,7 @@
             "id": 123,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -988,7 +988,7 @@
             "id": 124,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -996,7 +996,7 @@
             "id": 125,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1004,7 +1004,7 @@
             "id": 126,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1012,7 +1012,7 @@
             "id": 127,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1020,7 +1020,7 @@
             "id": 128,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1028,7 +1028,7 @@
             "id": 129,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1036,7 +1036,7 @@
             "id": 130,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1044,7 +1044,7 @@
             "id": 131,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1052,7 +1052,7 @@
             "id": 132,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1060,7 +1060,7 @@
             "id": 133,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1068,7 +1068,7 @@
             "id": 134,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1076,7 +1076,7 @@
             "id": 135,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1084,7 +1084,7 @@
             "id": 136,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1092,7 +1092,7 @@
             "id": 137,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1100,7 +1100,7 @@
             "id": 138,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1108,7 +1108,7 @@
             "id": 139,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1116,7 +1116,7 @@
             "id": 140,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1124,7 +1124,7 @@
             "id": 141,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1132,7 +1132,7 @@
             "id": 142,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1140,7 +1140,7 @@
             "id": 143,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1148,7 +1148,7 @@
             "id": 144,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1156,7 +1156,7 @@
             "id": 145,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1164,7 +1164,7 @@
             "id": 146,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1172,7 +1172,7 @@
             "id": 147,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1180,7 +1180,7 @@
             "id": 148,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1188,7 +1188,7 @@
             "id": 149,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1196,7 +1196,7 @@
             "id": 150,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1204,7 +1204,7 @@
             "id": 151,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1212,7 +1212,7 @@
             "id": 152,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1220,7 +1220,7 @@
             "id": 153,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1228,7 +1228,7 @@
             "id": 154,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1236,7 +1236,7 @@
             "id": 155,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1244,7 +1244,7 @@
             "id": 156,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1252,7 +1252,7 @@
             "id": 157,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1260,7 +1260,7 @@
             "id": 158,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1268,7 +1268,7 @@
             "id": 159,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1276,7 +1276,7 @@
             "id": 160,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1284,7 +1284,7 @@
             "id": 161,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1292,7 +1292,7 @@
             "id": 162,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1300,7 +1300,7 @@
             "id": 163,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1308,7 +1308,7 @@
             "id": 164,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1316,7 +1316,7 @@
             "id": 165,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1324,7 +1324,7 @@
             "id": 166,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1332,7 +1332,7 @@
             "id": 167,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1340,7 +1340,7 @@
             "id": 168,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1348,7 +1348,7 @@
             "id": 169,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1356,7 +1356,7 @@
             "id": 170,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1364,7 +1364,7 @@
             "id": 171,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1372,7 +1372,7 @@
             "id": 172,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1380,7 +1380,7 @@
             "id": 173,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1388,7 +1388,7 @@
             "id": 174,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1396,7 +1396,7 @@
             "id": 175,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1404,7 +1404,7 @@
             "id": 176,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1412,7 +1412,7 @@
             "id": 177,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1420,7 +1420,7 @@
             "id": 178,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1428,7 +1428,7 @@
             "id": 179,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1436,7 +1436,7 @@
             "id": 180,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1444,7 +1444,7 @@
             "id": 181,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1452,7 +1452,7 @@
             "id": 182,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1460,7 +1460,7 @@
             "id": 183,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1468,7 +1468,7 @@
             "id": 184,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1476,7 +1476,7 @@
             "id": 185,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1484,7 +1484,7 @@
             "id": 186,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1492,7 +1492,7 @@
             "id": 187,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1500,7 +1500,7 @@
             "id": 188,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1508,7 +1508,7 @@
             "id": 189,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1516,7 +1516,7 @@
             "id": 190,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1524,7 +1524,7 @@
             "id": 191,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1532,7 +1532,7 @@
             "id": 192,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1540,7 +1540,7 @@
             "id": 193,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1548,7 +1548,7 @@
             "id": 194,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1556,7 +1556,7 @@
             "id": 195,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1564,7 +1564,7 @@
             "id": 196,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1572,7 +1572,7 @@
             "id": 197,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1580,7 +1580,7 @@
             "id": 198,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1588,7 +1588,7 @@
             "id": 199,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         },
@@ -1596,7 +1596,7 @@
             "id": 200,
             "waza":"世界一周",
             "favoriteSum":0,
-            "level":"3",
+            "level":3,
             "makeSum":0,
             "url":"aiueo"
         }

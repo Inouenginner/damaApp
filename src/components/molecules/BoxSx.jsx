@@ -19,7 +19,7 @@ export default function BoxSx(props) {
   const classes = useStyles();
   const selector = useSelector((state) => state);
   let wazas = getWazas(selector);
-  let isLoading = getLoading(selector);
+  const isLoading = getLoading(selector);
 
   //各条件でsortする前に番号順にsort
   wazas.sort(function (a, b) {
@@ -55,27 +55,27 @@ export default function BoxSx(props) {
       break;
     case "50":
       wazas = wazas.filter((waza) => {
-        return waza.level === "1";
+        return waza.level === 1;
       });
       break;
     case "60":
       wazas = wazas.filter((waza) => {
-        return waza.level === "2";
+        return waza.level === 2;
       });
       break;
     case "70":
       wazas = wazas.filter((waza) => {
-        return waza.level === "3";
+        return waza.level === 3;
       });
       break;
     case "80":
       wazas = wazas.filter((waza) => {
-        return waza.level === "4";
+        return waza.level === 4;
       });
       break;
     case "90":
       wazas = wazas.filter((waza) => {
-        return waza.level === "5";
+        return waza.level === 5;
       });
       break;
     case "100":
@@ -94,32 +94,32 @@ export default function BoxSx(props) {
       break;
     case "120":
       wazas = wazas.filter((waza) => {
-        return waza.achieve === "0" || waza.achieve === "";
+        return waza.achieve === 0;
       });
       break;
     case "130":
       wazas = wazas.filter((waza) => {
-        return waza.achieve === "1";
+        return waza.achieve === 1;
       });
       break;
     case "140":
       wazas = wazas.filter((waza) => {
-        return waza.achieve === "2";
+        return waza.achieve === 2;
       });
       break;
     case "150":
       wazas = wazas.filter((waza) => {
-        return waza.achieve === "3";
+        return waza.achieve === 3;
       });
       break;
     case "160":
       wazas = wazas.filter((waza) => {
-        return waza.achieve === "4";
+        return waza.achieve === 4;
       });
       break;
     case "170":
       wazas = wazas.filter((waza) => {
-        return waza.achieve === "5";
+        return waza.achieve === 5;
       });
       break;
     case "180":

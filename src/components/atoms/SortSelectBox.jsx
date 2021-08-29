@@ -8,7 +8,9 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles((theme) => ({
   sortSelect: {
     width: "200px",
-    marginLeft: "70%",
+    position: "absolute",
+    top: "67px",
+    right: "0px",
   },
 }));
 

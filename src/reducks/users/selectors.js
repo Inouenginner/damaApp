@@ -8,6 +8,9 @@ export const getUserInfo = createSelector(
 export const getUserId = createSelector(
     [userSelector], state => state.uid
 )
+export const getUserName = createSelector(
+    [userSelector], state => state.username
+)
 export const getLoading = createSelector(
     [userSelector], state => state.isLoading
 )

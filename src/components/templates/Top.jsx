@@ -6,7 +6,6 @@ import Grid from "@material-ui/core/Grid";
 import { NameInput } from "../atoms/NameInput";
 import { LoginButton } from "../atoms/LoginButton";
 import { makeStyles } from "@material-ui/core/styles";
-import { push } from "connected-react-router";
 
 const useStyles = makeStyles((theme) => ({
   text: {
@@ -30,7 +29,6 @@ export const Top = () => {
   );
   const goRecord = useCallback((name) => {
     dispatch(signIn(name));
-    dispatch(push("/record"));
     //eslint-disable-next-line
   }, []);
 

@@ -1,5 +1,6 @@
 {
-    "search.exclude": {
-        "/.history": true
-    }
+  "search.exclude": {
+    "/.history": true
+  },
+  "git.ignoreLimitWarning": true
 }
