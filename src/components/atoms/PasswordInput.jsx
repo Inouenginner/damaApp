@@ -1,17 +1,18 @@
 import React from "react";
 import TextField from "@material-ui/core/TextField";
 
-export const NameInput = (props) => {
+export const PasswordInput = (props) => {
   return (
     <TextField
-      id="input"
+      id="inputPass"
       name="input"
-      label="名前"
+      type="password"
+      label="パスワード"
       autoComplete="shipping address-line1"
       value={props.name}
       onChange={props.onChange}
       variant="outlined"
-      placeholder="名前"
+      placeholder="パスワード"
       required
     />
   );

@@ -45,11 +45,16 @@ export const ResultCharts = () => {
   const level5Success = wazaDetails
     .filter((wazaDetail) => wazaDetail["level"] === 5)
     .filter((wazaDetail) => wazaDetail["achieve"] >= 2).length;
-  const level1Record = Math.ceil(level1Success / level1Amt);
-  const level2Record = Math.ceil(level2Success / level2Amt);
-  const level3Record = Math.ceil(level3Success / level3Amt);
-  const level4Record = Math.ceil(level4Success / level4Amt);
-  const level5Record = Math.ceil(level5Success / level5Amt);
+  const level1Record = Math.ceil((level1Success / level1Amt) * 100);
+  const level2Record = Math.ceil((level2Success / level2Amt) * 100);
+  const level3Record = Math.ceil((level3Success / level3Amt) * 100);
+  const level4Record = Math.ceil((level4Success / level4Amt) * 100);
+  const level5Record = Math.ceil((level5Success / level5Amt) * 100);
+  console.log(level1Amt);
+  console.log(level2Amt);
+  console.log(level5Record);
+  console.log(level5Success);
+  console.log(level5Amt);
   /** グラフデータ */
   const graphData = {
     labels: [

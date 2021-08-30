@@ -6,7 +6,8 @@ const initialState = {
         isSignedIn: false,
         uid: "",
         username: "",
-        isLoading: true
+        isLoading: true,
+        role: "user",
     }
 };
 

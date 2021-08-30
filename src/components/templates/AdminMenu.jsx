@@ -5,6 +5,7 @@ import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
 import { BackButton } from "../atoms/BackButton";
 import { push } from "connected-react-router";
+import { adminSignOut } from "../../reducks/wazas/operations";
 
 const useStyles = makeStyles((theme) => ({
   text: {
@@ -31,7 +32,7 @@ export const AdminMenu = () => {
     //eslint-disable-next-line
   }, []);
   const adminLogout = useCallback(() => {
-    dispatch(push("/admin"));
+    dispatch(adminSignOut());
     //eslint-disable-next-line
   }, []);
 

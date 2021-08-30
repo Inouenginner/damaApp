@@ -5,14 +5,6 @@ import { push } from "connected-react-router";
 export const signOut = () => {
     return async (dispatch, getState) => {
         dispatch(logOutUserAction());
-        // auth.onAuthStateChanged( (user) => {
-        //     auth.signOut().then(()=>{
-        //       console.log("ログアウトしました");
-        //     })
-        //     .catch( (error)=>{
-        //       console.log(`ログアウト時にエラーが発生しました (${error})`);
-        //     });
-        //   });
-          dispatch(push("/"));
+        dispatch(push("/"));
     }
 }

@@ -5,7 +5,7 @@ import { SortSelectBox } from "../atoms/SortSelectBox";
 import { makeStyles } from "@material-ui/core/styles";
 import { BackButton } from "../atoms/BackButton";
 import { signOut } from "../../reducks/users/operations";
-import { moveChart } from "../../reducks/wazas/operations";
+import { push } from "connected-react-router";
 import { getUserName } from "../../reducks/users/selectors";
 import Typography from "@material-ui/core/Typography";
 
@@ -32,7 +32,7 @@ export const Record = () => {
     //eslint-disable-next-line
   }, []);
   const goChart = useCallback(() => {
-    dispatch(moveChart());
+    dispatch(push("/resultCharts"));
     //eslint-disable-next-line
   }, []);
 

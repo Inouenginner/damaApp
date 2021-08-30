@@ -9,7 +9,17 @@ export const UserReducer = (state = initialState.users, action) => {
                 ...state,
                 ...action.payload
             };
-        case Actions.LOG_OUT:
+        case Actions.USER_LOG_OUT:
+            return{
+                ...state,
+                ...action.payload
+            };
+        case Actions.ADMIN_LOGIN:
+            return{
+                ...state,
+                ...action.payload
+            };
+        case Actions.ADMIN_LOG_OUT:
             return{
                 ...state,
                 ...action.payload

@@ -16,7 +16,7 @@ export const store = createStore(history);
 
 
 ReactDOM.render(
-  <React.StrictMode>
+  //<React.StrictMode>
     <Provider store={store}>
       <ConnectedRouter history={history}>
         <MuiThemeProvider theme={theme}>
@@ -24,7 +24,7 @@ ReactDOM.render(
         </MuiThemeProvider>
       </ConnectedRouter>
     </Provider>,
-  </React.StrictMode>,
+  //</React.StrictMode>
   document.getElementById('root')
 );
 
