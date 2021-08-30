@@ -90,7 +90,7 @@ export const wazaRegist = () => {
 }
 
 //ユーザーログイン時
-export const signIn = (name, password) => {
+export const signUp = (name, password) => {
     return async (dispatch) => {
         let sameIdUserData ;
         let maxId;
@@ -102,15 +102,15 @@ export const signIn = (name, password) => {
             return false;
         }
         //ログインしたユーザ情報の取得
-        await db.collection("users").where("name", "==", name).where("password", "==", password).get().then(snapShot => {
+        await db.collection("users").where("name", "==", name).get().then(snapShot => {
             snapShot.forEach(doc => {
                 sameIdUserData = doc.data()
             })
         })
         //すでに登録されたユーザ情報があるのならばidの取得
         if (sameIdUserData != null) {
-            userId = sameIdUserData["id"];
-            console.log("already exist user");
+            alert("残念！同じ名前のユーザがいるので他の名前にしてください！")
+            return false;
         } else {
             //登録するidの採番
             await db.collection("users").orderBy("id","desc").limit(1).get().then(snapShot => {
@@ -157,6 +157,7 @@ export const signIn = (name, password) => {
                 console.log("No such document!");
             }
         });
+        //普通にdetailの情報は初期値なんだけどね（今はログイン時と揃えてる）
         const detailsRef = db.collection('users').doc(userId.toString()).collection('results');
         const detailsDocsOrderById = await detailsRef.orderBy("id", "asc").get();
         detailsDocsOrderById.forEach((detailsDocOrderById) => {
@@ -201,3 +202,65 @@ export const updateDetail = (achieve,memo,favorite, wazaId, userId) => {
         dispatch(push('/record'))
     }
 };
+
+
+
+//ユーザーログイン時
+export const login = (name, password) => {
+    return async (dispatch) => {
+        let sameIdUserData ;
+        let userId;
+        //valid
+        if(name === "" || password === "") {
+            alert("必須項目が未入力です")
+            return false;
+        }
+        //ログインしたユーザ情報の取得
+        await db.collection("users").where("name", "==", name).where("password", "==", password).get().then(snapShot => {
+            snapShot.forEach(doc => {
+                sameIdUserData = doc.data()
+            })
+        })
+        //すでに登録されたユーザ情報があるのならばidの取得
+        if (sameIdUserData != null) {
+            userId = sameIdUserData["id"];
+            console.log("already exist user");
+        } else {
+            alert("君まだ登録してないね？？それか情報が間違ってます")
+            return false;
+        }
+
+        // 技のstate取得(技の基本情報と達成度の詳細情報を連結した上で)
+        let userWazaList = [];
+        console.log("id:"+userId)
+        const wazasRef = db.collection('wazas');
+        const wazasDoc = await wazasRef.doc(userId.toString()).get()
+        const wazasDocsOrderById = await wazasRef.orderBy("id", "asc").get()
+        wazasDocsOrderById.forEach((wazasDocOrderById) => {
+            if (wazasDoc.exists) {
+                userWazaList.push(wazasDocOrderById.data());
+            } else {
+                console.log("No such document!");
+            }
+        });
+        const detailsRef = db.collection('users').doc(userId.toString()).collection('results');
+        const detailsDocsOrderById = await detailsRef.orderBy("id", "asc").get();
+        detailsDocsOrderById.forEach((detailsDocOrderById) => {
+            if (detailsDocOrderById.exists) {
+                Object.assign(userWazaList[detailsDocOrderById.data()["id"] - 1], detailsDocOrderById.data());
+            }
+        });
+        dispatch(fetchWazasAction(userWazaList));
+
+        // ユーザーのstate更新
+        const userData = {
+            uid: userId,
+            username: name,
+            isSignedIn: true,
+            isLoading: false,
+            role: "user"
+        }
+        dispatch(initUserAction(userData));
+        dispatch(push("/record"));
+    }
+}

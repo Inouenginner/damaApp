@@ -6,11 +6,25 @@ import "../../App.css";
 import { BackButton } from "../atoms/BackButton";
 import { useDispatch } from "react-redux";
 import { push } from "connected-react-router";
+import { getSignedIn } from "../../reducks/users/selectors";
+import Link from "@material-ui/core/Link";
+import { Link as RouterLink } from "react-router-dom";
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles(() => ({
+  loader: {
+    marginLeft: "auto",
+    marginRight: "auto",
+    textAlign: "center",
+  },
+}));
 
 export const ResultCharts = () => {
+  const classes = useStyles();
   const dispatch = useDispatch();
   const selector = useSelector((state) => state);
   const wazaDetails = getWazas(selector);
+  const isSignedIn = getSignedIn(selector);
 
   //各レベルの技の総数
   const level1Amt = wazaDetails.filter(
@@ -50,11 +64,6 @@ export const ResultCharts = () => {
   const level3Record = Math.ceil((level3Success / level3Amt) * 100);
   const level4Record = Math.ceil((level4Success / level4Amt) * 100);
   const level5Record = Math.ceil((level5Success / level5Amt) * 100);
-  console.log(level1Amt);
-  console.log(level2Amt);
-  console.log(level5Record);
-  console.log(level5Success);
-  console.log(level5Amt);
   /** グラフデータ */
   const graphData = {
     labels: [
@@ -107,6 +116,15 @@ export const ResultCharts = () => {
     //eslint-disable-next-line
   }, []);
 
+  if (!isSignedIn) {
+    return (
+      <div className={classes.loader}>
+        <Link component={RouterLink} to="/">
+          ログインしてね
+        </Link>
+      </div>
+    );
+  }
   return (
     <div className="App">
       {/* グラフコンポーネントの呼び出し */}

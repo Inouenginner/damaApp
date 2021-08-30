@@ -14,8 +14,23 @@ import { MemoInput } from "../atoms/MemoInput";
 import { FavoriteCheckBox } from "../atoms/FavoriteCheckBox";
 import { UpdateButton } from "../atoms/UpdateButton";
 import { BackButton } from "../atoms/BackButton";
+import { getSignedIn } from "../../reducks/users/selectors";
+
+import Link from "@material-ui/core/Link";
+import { Link as RouterLink } from "react-router-dom";
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles(() => ({
+  loader: {
+    marginLeft: "auto",
+    marginRight: "auto",
+    textAlign: "center",
+  },
+}));
 
 export const WazaDetail = () => {
+  const classes = useStyles();
+
   const dispatch = useDispatch();
   const location = useLocation();
   const wazaId = location.pathname.split("/detail/")[1];
@@ -23,11 +38,14 @@ export const WazaDetail = () => {
   const wazaList = getWazas(selector);
   const userId = getUserId(selector);
   const targetWaza = wazaList[wazaId - 1];
+  const isSignedIn = getSignedIn(selector);
 
-  const isFavorite = targetWaza.favorite === true;
-  const [achieve, setAchieve] = useState(targetWaza.achieve),
-    [memo, setMemo] = useState(targetWaza.memo),
-    [favorite, setFavorite] = useState(targetWaza.favorite);
+  // const [achieve, setAchieve] = useState(targetWaza.achieve),
+  //   [memo, setMemo] = useState(targetWaza.memo),
+  //   [favorite, setFavorite] = useState(targetWaza.favorite);
+  const [achieve, setAchieve] = useState(0),
+    [memo, setMemo] = useState(""),
+    [favorite, setFavorite] = useState(false);
 
   //関数のメモ化
   const achieveChange = useCallback(
@@ -52,6 +70,15 @@ export const WazaDetail = () => {
     //eslint-disable-next-line
   }, []);
 
+  if (!isSignedIn) {
+    return (
+      <div className={classes.loader}>
+        <Link component={RouterLink} to="/">
+          ログインしてね
+        </Link>
+      </div>
+    );
+  }
   return (
     <React.Fragment>
       <Container maxWidth="sm">
@@ -73,7 +100,7 @@ export const WazaDetail = () => {
           </Grid>
           <Grid item xs={12}>
             <FavoriteCheckBox
-              defaultChecked={isFavorite}
+              defaultChecked={targetWaza.favorite}
               onChange={handleCheckboxClick}
             />
           </Grid>

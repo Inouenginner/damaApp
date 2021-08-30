@@ -39,7 +39,7 @@ export const Record = () => {
   return (
     <div className={classes.root}>
       <BackButton onClick={backToHome} label="Logout" />
-      <BackButton onClick={goChart} label="チャートへ" />
+      <BackButton onClick={goChart} label="成績チャートへ" />
       <Typography variant="subtitle1" gutterBottom>
         ユーザ名：{username}さん
       </Typography>

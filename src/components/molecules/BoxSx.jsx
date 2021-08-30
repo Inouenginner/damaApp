@@ -3,9 +3,11 @@ import Box from "@material-ui/core/Box";
 import TechBox from "../atoms/TechBox";
 import { useSelector } from "react-redux";
 import { getWazas } from "../../reducks/wazas/selectors";
-import { getLoading } from "../../reducks/users/selectors";
+import { getLoading, getSignedIn } from "../../reducks/users/selectors";
 import Loader from "react-loader-spinner";
 import { makeStyles } from "@material-ui/core/styles";
+import Link from "@material-ui/core/Link";
+import { Link as RouterLink } from "react-router-dom";
 
 const useStyles = makeStyles(() => ({
   loader: {
@@ -20,6 +22,7 @@ export default function BoxSx(props) {
   const selector = useSelector((state) => state);
   let wazas = getWazas(selector);
   const isLoading = getLoading(selector);
+  const isSignedIn = getSignedIn(selector);
 
   //各条件でsortする前に番号順にsort
   wazas.sort(function (a, b) {
@@ -134,6 +137,15 @@ export default function BoxSx(props) {
       break;
   }
 
+  if (!isSignedIn && isLoading) {
+    return (
+      <div className={classes.loader}>
+        <Link component={RouterLink} to="/">
+          ログインしてね
+        </Link>
+      </div>
+    );
+  }
   if (isLoading) {
     return (
       <Box
@@ -156,31 +168,30 @@ export default function BoxSx(props) {
         </div>
       </Box>
     );
-  } else {
-    return (
-      <Box
-        component="span"
-        sx={{ p: 2, width: "3px", border: "1px dashed grey" }}
-        display="flex"
-        align-items="center"
-        flexWrap="wrap"
-      >
-        {wazas.length > 0 ? (
-          wazas.map((waza) => (
-            <TechBox
-              key={waza.id}
-              id={waza.id}
-              achieve={waza.achieve}
-              name={waza.waza}
-              favorite={waza.favorite}
-              memo={waza.memo}
-              level={waza.level}
-            />
-          ))
-        ) : (
-          <div className={classes.loader}>該当なし</div>
-        )}
-      </Box>
-    );
   }
+  return (
+    <Box
+      component="span"
+      sx={{ p: 2, width: "3px", border: "1px dashed grey" }}
+      display="flex"
+      align-items="center"
+      flexWrap="wrap"
+    >
+      {wazas.length > 0 ? (
+        wazas.map((waza) => (
+          <TechBox
+            key={waza.id}
+            id={waza.id}
+            achieve={waza.achieve}
+            name={waza.waza}
+            favorite={waza.favorite}
+            memo={waza.memo}
+            level={waza.level}
+          />
+        ))
+      ) : (
+        <div className={classes.loader}>該当なし</div>
+      )}
+    </Box>
+  );
 }

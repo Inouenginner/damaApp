@@ -12,11 +12,17 @@ import { AdminRegist } from "../src/components/templates/AdminRegist";
 import { ResultCharts } from "./components/templates/ResultCharts";
 import { RegistComp } from "./components/templates/RegistComp";
 import { AddComp } from "./components/templates/AddComp";
+import { SignUp } from "./components/templates/SignUp";
 
 export const Router = () => {
   return (
     <Switch>
+      <Route exact path={"/"} component={Top} />
       <Route path={"/record"} component={Record} />
+      <Route exact path={"/detail/:id"} component={WazaDetail} />
+      <Route path={"/signup"} component={SignUp} />
+      <Route path={"/resultCharts"} component={ResultCharts} />
+
       <Route path={"/admin"} component={Admin} />
       <Route path={"/adminMenu"} component={AdminMenu} />
       <Route path={"/adminRegist"} component={AdminRegist} />
@@ -25,9 +31,6 @@ export const Router = () => {
       <Route path={"/registComp"} component={RegistComp} />
       <Route path={"/addComp"} component={AddComp} />
       <Route path={"/editComp"} component={EditComp} />
-      <Route path={"/resultCharts"} component={ResultCharts} />
-      <Route exact path={"/"} component={Top} />
-      <Route exact path={"/detail/:id"} component={WazaDetail} />
     </Switch>
   );
 };

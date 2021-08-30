@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from "react";
 import { useDispatch } from "react-redux";
-import { login } from "../../reducks/wazas/operations";
+import { signUp } from "../../reducks/wazas/operations";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import { NameInput } from "../atoms/NameInput";
@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export const Top = () => {
+export const SignUp = () => {
   const classes = useStyles();
   const dispatch = useDispatch();
 
@@ -40,7 +40,7 @@ export const Top = () => {
   );
 
   const goRecord = useCallback((name, password) => {
-    dispatch(login(name, password));
+    dispatch(signUp(name, password));
     //eslint-disable-next-line
   }, []);
 
@@ -48,11 +48,11 @@ export const Top = () => {
     <Container maxWidth="sm" spacing={3}>
       <Grid container spacing={3}>
         <Grid item xs={12} sm={8}>
-          <h1>ログイン画面</h1>
+          <h1>新規ユーザー登録画面</h1>
         </Grid>
         <Grid item xs={12} sm={8}>
           <div className={classes.text}>
-            ・登録したニックネームとパスワードを入力してください
+            ・ニックネームとパスワードを入力してください（今後ログインに使用します。適当な値でも構いません）
           </div>
         </Grid>
         <Grid item xs={12} sm={8}>
@@ -69,8 +69,8 @@ export const Top = () => {
           <LoginButton onClick={() => goRecord(name, password)} />
         </Grid>
         <Grid item xs={12} sm={8}>
-          <Link component={RouterLink} to="/signup">
-            新規登録に進む
+          <Link component={RouterLink} to="/">
+            ログイン画面に進む
           </Link>
         </Grid>
       </Grid>

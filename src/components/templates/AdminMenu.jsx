@@ -6,6 +6,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import { BackButton } from "../atoms/BackButton";
 import { push } from "connected-react-router";
 import { adminSignOut } from "../../reducks/wazas/operations";
+import { useSelector } from "react-redux";
+import { getRole } from "../../reducks/users/selectors";
 
 const useStyles = makeStyles((theme) => ({
   text: {
@@ -19,6 +21,8 @@ const useStyles = makeStyles((theme) => ({
 export const AdminMenu = () => {
   const classes = useStyles();
   const dispatch = useDispatch();
+  const selector = useSelector((state) => state);
+  const role = getRole(selector);
   const goToWazaRegist = useCallback(() => {
     dispatch(push("/adminRegist"));
     //eslint-disable-next-line
@@ -36,6 +40,9 @@ export const AdminMenu = () => {
     //eslint-disable-next-line
   }, []);
 
+  if (role !== "admin") {
+    return <div>管理者ログインしてください</div>;
+  }
   return (
     <Container maxWidth="sm" spacing={3}>
       <Grid container spacing={3}>

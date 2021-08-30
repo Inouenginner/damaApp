@@ -7,15 +7,21 @@ import { UpdateButton } from "../atoms/UpdateButton";
 import { BackButton } from "../atoms/BackButton";
 import { push } from "connected-react-router";
 import { wazaRegist } from "../../reducks/wazas/operations";
+import { useSelector } from "react-redux";
+import { getRole } from "../../reducks/users/selectors";
 
 export const AdminRegist = () => {
   const dispatch = useDispatch();
-
+  const selector = useSelector((state) => state);
+  const role = getRole(selector);
   const backToAdminHome = useCallback(() => {
     dispatch(push("/adminMenu"));
     //eslint-disable-next-line
   }, []);
 
+  if (role !== "admin") {
+    return <div>管理者ログインしてください</div>;
+  }
   return (
     <React.Fragment>
       <Container maxWidth="sm">

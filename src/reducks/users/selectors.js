@@ -14,3 +14,9 @@ export const getUserName = createSelector(
 export const getLoading = createSelector(
     [userSelector], state => state.isLoading
 )
+export const getSignedIn = createSelector(
+    [userSelector], state => state.isSignedIn
+)
+export const getRole = createSelector(
+    [userSelector], state => state.role
+)
