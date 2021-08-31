@@ -17,6 +17,7 @@
     "css-what": "^5.0.1",
     "firebase": "^8.6.1",
     "history": "^4.10.1",
+    "js-sha512": "^0.8.0",
     "react": "^17.0.2",
     "react-bootstrap": "^1.6.0",
     "react-chartjs-2": "^2.9.0",

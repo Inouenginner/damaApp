@@ -3,14 +3,16 @@ import {initUserAction, loginAdminAction, logOutAdminAction} from "../users/acti
 import {db, FirebaseTimestamp} from '../../firebase/index'
 import {push} from "connected-react-router"
 import axios from 'axios';
+import sha512 from 'js-sha512';
+
 
 //管理者ログイン
 export const adLogin = (adName, adPass) => {
     return async (dispatch) => {
-        console.log(adPass)
         let adminUserDate;
         let adminId;
-        await db.collection("users").where("name", "==", adName).where("password", "==", adPass).where("role", "==", "admin").get().then(snapShot => {
+        const hashPass = sha512(adPass)
+        await db.collection("users").where("name", "==", adName).where("password", "==", hashPass).where("role", "==", "admin").get().then(snapShot => {
             snapShot.forEach(doc => {
                 adminUserDate = doc.data()
                 adminId = adminUserDate["id"];
@@ -89,12 +91,13 @@ export const wazaRegist = () => {
     }
 }
 
-//ユーザーログイン時
+//ユーザー登録時
 export const signUp = (name, password) => {
     return async (dispatch) => {
         let sameIdUserData ;
         let maxId;
         let userId;
+        const hashPass = sha512(password)
         const wazaSum = 200;
         //valid
         if(name === "" || password === "") {
@@ -102,7 +105,7 @@ export const signUp = (name, password) => {
             return false;
         }
         //ログインしたユーザ情報の取得
-        await db.collection("users").where("name", "==", name).get().then(snapShot => {
+        await db.collection("users").where("name", "==", name).where("password", "==", hashPass).get().then(snapShot => {
             snapShot.forEach(doc => {
                 sameIdUserData = doc.data()
             })
@@ -131,7 +134,7 @@ export const signUp = (name, password) => {
             const timestamp = FirebaseTimestamp.now()
             let batch = db.batch();
             const userStandardRef = db.collection('users').doc(userId.toString());
-            batch.set(userStandardRef, { id: userId, password: password, name: name, registerDate: timestamp, role: 'user'})
+            batch.set(userStandardRef, { id: userId, password: hashPass, name: name, registerDate: timestamp, role: 'user'})
             // ユーザごとの各技達成度等詳細DB登録（処理速度最速while文使用）
             let index = 1;
             while (index <= wazaSum) {
@@ -210,13 +213,14 @@ export const login = (name, password) => {
     return async (dispatch) => {
         let sameIdUserData ;
         let userId;
+        const hashPass = sha512(password)
         //valid
         if(name === "" || password === "") {
             alert("必須項目が未入力です")
             return false;
         }
         //ログインしたユーザ情報の取得
-        await db.collection("users").where("name", "==", name).where("password", "==", password).get().then(snapShot => {
+        await db.collection("users").where("name", "==", name).where("password", "==", hashPass).get().then(snapShot => {
             snapShot.forEach(doc => {
                 sameIdUserData = doc.data()
             })

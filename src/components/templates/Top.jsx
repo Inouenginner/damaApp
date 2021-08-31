@@ -39,11 +39,6 @@ export const Top = () => {
     [setPassword]
   );
 
-  const goRecord = useCallback((name, password) => {
-    dispatch(login(name, password));
-    //eslint-disable-next-line
-  }, []);
-
   return (
     <Container maxWidth="sm" spacing={3}>
       <Grid container spacing={3}>
@@ -66,7 +61,10 @@ export const Top = () => {
           />
         </Grid>
         <Grid item xs={12} sm={8}>
-          <LoginButton onClick={() => goRecord(name, password)} />
+          <LoginButton
+            label="kendamastart"
+            onClick={() => dispatch(login(name, password))}
+          />
         </Grid>
         <Grid item xs={12} sm={8}>
           <Link component={RouterLink} to="/signup">

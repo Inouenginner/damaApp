@@ -52,7 +52,7 @@ export const SignUp = () => {
         </Grid>
         <Grid item xs={12} sm={8}>
           <div className={classes.text}>
-            ・ニックネームとパスワードを入力してください（今後ログインに使用します。適当な値でも構いません）
+            ・ニックネームとパスワードを入力してください（今後ログインに使用します）
           </div>
         </Grid>
         <Grid item xs={12} sm={8}>
@@ -66,7 +66,10 @@ export const SignUp = () => {
           />
         </Grid>
         <Grid item xs={12} sm={8}>
-          <LoginButton onClick={() => goRecord(name, password)} />
+          <LoginButton
+            label="登録・kendamastart"
+            onClick={() => goRecord(name, password)}
+          />
         </Grid>
         <Grid item xs={12} sm={8}>
           <Link component={RouterLink} to="/">

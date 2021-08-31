@@ -4,7 +4,7 @@ import Button from "@material-ui/core/Button";
 export const LoginButton = (props) => {
   return (
     <Button variant="outlined" color="primary" onClick={() => props.onClick()}>
-      kendamastart
+      {props.label}
     </Button>
   );
 };
