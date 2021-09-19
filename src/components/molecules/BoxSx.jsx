@@ -3,11 +3,9 @@ import Box from "@material-ui/core/Box";
 import TechBox from "../atoms/TechBox";
 import { useSelector } from "react-redux";
 import { getWazas } from "../../reducks/wazas/selectors";
-import { getLoading, getSignedIn } from "../../reducks/users/selectors";
+import { getLoading } from "../../reducks/users/selectors";
 import Loader from "react-loader-spinner";
 import { makeStyles } from "@material-ui/core/styles";
-import Link from "@material-ui/core/Link";
-import { Link as RouterLink } from "react-router-dom";
 
 const useStyles = makeStyles(() => ({
   loader: {
@@ -22,7 +20,6 @@ export default function BoxSx(props) {
   const selector = useSelector((state) => state);
   let wazas = getWazas(selector);
   const isLoading = getLoading(selector);
-  const isSignedIn = getSignedIn(selector);
 
   //各条件でsortする前に番号順にsort
   wazas.sort(function (a, b) {
@@ -137,15 +134,6 @@ export default function BoxSx(props) {
       break;
   }
 
-  if (!isSignedIn && isLoading) {
-    return (
-      <div className={classes.loader}>
-        <Link component={RouterLink} to="/">
-          ログインしてね
-        </Link>
-      </div>
-    );
-  }
   if (isLoading) {
     return (
       <Box

@@ -35,10 +35,6 @@ export const Admin = () => {
     },
     [setPassword]
   );
-  const adminLogin = useCallback((name, password) => {
-    dispatch(adLogin(name, password));
-    //eslint-disable-next-line
-  }, []);
 
   return (
     <Container maxWidth="sm" spacing={3}>
@@ -53,7 +49,10 @@ export const Admin = () => {
           <PasswordInput name={password} onChange={passwordChange} />
         </Grid>
         <Grid item xs={12} sm={8}>
-          <LoginButton onClick={() => adminLogin(name, password)} />
+          <LoginButton
+            label="管理者ログイン"
+            onClick={() => dispatch(adLogin(name, password))}
+          />
         </Grid>
       </Grid>
     </Container>

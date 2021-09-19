@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import Typography from "@material-ui/core/Typography";
@@ -9,35 +9,35 @@ import CardActionArea from "@material-ui/core/CardActionArea";
 const useStyles = makeStyles({
   bg1: {
     flex: "flexWrap",
-    backgroundColor: "pink",
+    backgroundColor: "tomato",
     width: "90px",
     height: "100px",
     position: "relative",
   },
   bg2: {
     flex: "flexWrap",
-    backgroundColor: "yellow",
+    backgroundColor: "pink",
     width: "90px",
     height: "100px",
     position: "relative",
   },
   bg3: {
     flex: "flexWrap",
-    backgroundColor: "green",
+    backgroundColor: "yellow",
     width: "90px",
     height: "100px",
     position: "relative",
   },
   bg4: {
     flex: "flexWrap",
-    backgroundColor: "purple",
+    backgroundColor: "palegreen",
     width: "90px",
     height: "100px",
     position: "relative",
   },
   bg5: {
     flex: "flexWrap",
-    backgroundColor: "gray",
+    backgroundColor: "mediumpurple",
     width: "90px",
     height: "100px",
     position: "relative",
@@ -47,9 +47,6 @@ const useStyles = makeStyles({
     backgroundColor: "white",
     width: "90px",
     height: "100px",
-    position: "relative",
-  },
-  card: {
     position: "relative",
   },
   title: {
@@ -66,6 +63,7 @@ const useStyles = makeStyles({
   },
   wazaName: {
     fontSize: 10,
+    padding: "0px 5px 0px 5px",
   },
 });
 
@@ -94,14 +92,12 @@ export default function TechBox(props) {
   const classes = useStyles();
   const dispatch = useDispatch();
 
-  const goToWazaDetail = useCallback((id) => {
-    dispatch(push("/detail/" + id));
-    // eslint-disable-next-line
-  }, []);
-
   return (
     <Card className={classes[bg_class]}>
-      <CardActionArea onClick={() => goToWazaDetail(props.id)} size="small">
+      <CardActionArea
+        onClick={() => dispatch(push("/detail/" + props.id))}
+        size="small"
+      >
         <div className={classes.titleBox}>
           <Typography
             className={classes.title}
@@ -110,7 +106,7 @@ export default function TechBox(props) {
           >
             {props.id}
           </Typography>
-          <Typography color="textSecondary" className={classes.wazaName}>
+          <Typography color="textPrimary" className={classes.wazaName}>
             {props.name}
           </Typography>
           <Typography component="p" className={classes.info}>

@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React from "react";
 import { useDispatch } from "react-redux";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
@@ -23,22 +23,6 @@ export const AdminMenu = () => {
   const dispatch = useDispatch();
   const selector = useSelector((state) => state);
   const role = getRole(selector);
-  const goToWazaRegist = useCallback(() => {
-    dispatch(push("/adminRegist"));
-    //eslint-disable-next-line
-  }, []);
-  const goToWazaAdd = useCallback(() => {
-    dispatch(push("/adminAdd"));
-    //eslint-disable-next-line
-  }, []);
-  const goToWazaEdit = useCallback(() => {
-    dispatch(push("/adminEdit"));
-    //eslint-disable-next-line
-  }, []);
-  const adminLogout = useCallback(() => {
-    dispatch(adminSignOut());
-    //eslint-disable-next-line
-  }, []);
 
   if (role !== "admin") {
     return <div>管理者ログインしてください</div>;
@@ -48,10 +32,22 @@ export const AdminMenu = () => {
       <Grid container spacing={3}>
         <Grid item xs={12} sm={8}>
           <div className={classes.text}>管理者画面</div>
-          <BackButton onClick={goToWazaRegist} label="技登録へ進む" />
-          <BackButton onClick={goToWazaAdd} label="技追加へ進む" />
-          <BackButton onClick={goToWazaEdit} label="技編集へ進む" />
-          <BackButton onClick={adminLogout} label="ログアウト" />
+          <BackButton
+            onClick={() => dispatch(push("/adminRegist"))}
+            label="技登録へ進む"
+          />
+          <BackButton
+            onClick={() => dispatch(push("/adminAdd"))}
+            label="技追加へ進む"
+          />
+          <BackButton
+            onClick={() => dispatch(push("/adminEdit"))}
+            label="技編集へ進む"
+          />
+          <BackButton
+            onClick={() => dispatch(adminSignOut())}
+            label="ログアウト"
+          />
         </Grid>
       </Grid>
     </Container>

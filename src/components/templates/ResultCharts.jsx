@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React from "react";
 import { Bar } from "react-chartjs-2";
 import { useSelector } from "react-redux";
 import { getWazas } from "../../reducks/wazas/selectors";
@@ -111,11 +111,6 @@ export const ResultCharts = () => {
     },
   };
 
-  const backToRecord = useCallback(() => {
-    dispatch(push("/record"));
-    //eslint-disable-next-line
-  }, []);
-
   if (!isSignedIn) {
     return (
       <div className={classes.loader}>
@@ -129,7 +124,10 @@ export const ResultCharts = () => {
     <div className="App">
       {/* グラフコンポーネントの呼び出し */}
       <Bar data={graphData} options={graphOption} />
-      <BackButton onClick={backToRecord} label="レコードへ戻る" />
+      <BackButton
+        onClick={() => dispatch(push("/record"))}
+        label="レコードへ戻る"
+      />
     </div>
   );
 };

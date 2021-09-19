@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+# Name
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+『てるからの挑戦状-web 記録版』
 
-## Available Scripts
+# 概要
 
-In the project directory, you can run:
+けん玉 Youtuber てるが定期的に更新する「てるからの挑戦状」の達成度について記録ができるアプリケーション
 
-### `yarn start`
+# URL
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# テスト用アカウント
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# 利用方法
 
-### `yarn test`
+管理者側:ログイン後に各技に関して追加・編集ができる。
+ユーザ側:新規登録、ログイン後各技の達成度・メモ・お気に入りかどうかを登録することができる。フィルターやチャートをつかって現状の達成度の把握が容易に可能。
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# DEMO
 
-### `yarn build`
+新規登録画面
+ログイン画面
+記録画面
+詳細画面
+成績チャート画面
+管理者画面
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+けん玉の成績を記録するアプリはある程度存在している(KWC のものやけん玉協会系のもの)が、けん玉界で有名なてるからの挑戦状の成績を記録するアプリは存在していなかった。
+けん玉初心者・中級者の課題として、「次何の技をやったらいいかわからない」という問題がある。てるからの挑戦状はその課題を解決しているが、本アプリケーションを併用すると、視覚的にわかりやすい記録表とィルターやチャートがあるため、自分の達成度が把握しやすくモチベーションの維持に貢献できると考えられる。
+React.js による SPA 開発であるため、画面間の移動が非常に早い点が技術的な特徴として挙げられる。
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Author
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+\_hiroki inoue
+_pssy5xfd@gmail.com

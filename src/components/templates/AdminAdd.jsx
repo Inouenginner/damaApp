@@ -44,11 +44,6 @@ export const AdminAdd = () => {
     [setWazaUrl]
   );
 
-  const backToAdminHome = useCallback(() => {
-    dispatch(push("/adminMenu"));
-    //eslint-disable-next-line
-  }, []);
-
   if (role !== "admin") {
     return <div>管理者ログインしてください</div>;
   }
@@ -93,7 +88,10 @@ export const AdminAdd = () => {
           </Grid>
         </Grid>
         <Grid item xs={12}>
-          <BackButton onClick={backToAdminHome} label="戻る" />
+          <BackButton
+            onClick={() => dispatch(push("/adminMenu"))}
+            label="戻る"
+          />
           <UpdateButton
             onClick={() =>
               dispatch(addWaza(wazaId, wazaName, wazaLevel, wazaUrl))

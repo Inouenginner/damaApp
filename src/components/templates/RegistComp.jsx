@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React from "react";
 import { useDispatch } from "react-redux";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
@@ -22,10 +22,6 @@ export const RegistComp = () => {
   const dispatch = useDispatch();
   const selector = useSelector((state) => state);
   const role = getRole(selector);
-  const backToAdminHome = useCallback(() => {
-    dispatch(push("/adminMenu"));
-    //eslint-disable-next-line
-  }, []);
 
   if (role !== "admin") {
     return <div>管理者ログインしてください</div>;
@@ -35,7 +31,10 @@ export const RegistComp = () => {
       <Grid container spacing={3}>
         <Grid item xs={12} sm={8}>
           <div className={classes.text}>最初の技登録が完了しました</div>
-          <BackButton onClick={backToAdminHome} label="戻る" />
+          <BackButton
+            onClick={() => dispatch(push("/adminMenu"))}
+            label="戻る"
+          />
         </Grid>
       </Grid>
     </Container>

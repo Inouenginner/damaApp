@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import BoxSx from "../molecules/BoxSx";
 import { SortSelectBox } from "../atoms/SortSelectBox";
@@ -8,8 +8,16 @@ import { signOut } from "../../reducks/users/operations";
 import { push } from "connected-react-router";
 import { getUserName } from "../../reducks/users/selectors";
 import Typography from "@material-ui/core/Typography";
+import { getSignedIn } from "../../reducks/users/selectors";
+import Link from "@material-ui/core/Link";
+import { Link as RouterLink } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
+  loader: {
+    marginLeft: "auto",
+    marginRight: "auto",
+    textAlign: "center",
+  },
   root: {
     flexGrow: 1,
   },
@@ -22,28 +30,30 @@ export const Record = () => {
   const classes = useStyles();
   const dispatch = useDispatch();
   const selector = useSelector((state) => state);
+  const isSignedIn = getSignedIn(selector);
   const username = getUserName(selector);
   const [filter, setFilter] = useState("");
-  const handleChange = (event) => {
-    setFilter(event.target.value);
-  };
-  const backToHome = useCallback(() => {
-    dispatch(signOut());
-    //eslint-disable-next-line
-  }, []);
-  const goChart = useCallback(() => {
-    dispatch(push("/resultCharts"));
-    //eslint-disable-next-line
-  }, []);
 
+  if (!isSignedIn) {
+    return (
+      <div className={classes.loader}>
+        <Link component={RouterLink} to="/">
+          ログインしてね
+        </Link>
+      </div>
+    );
+  }
   return (
     <div className={classes.root}>
-      <BackButton onClick={backToHome} label="Logout" />
-      <BackButton onClick={goChart} label="成績チャートへ" />
+      <BackButton onClick={() => dispatch(signOut())} label="Logout" />
+      <BackButton
+        onClick={() => dispatch(push("/resultCharts"))}
+        label="成績チャートへ"
+      />
       <Typography variant="subtitle1" gutterBottom>
         ユーザ名：{username}さん
       </Typography>
-      <SortSelectBox value={filter} onChange={handleChange} />
+      <SortSelectBox value={filter} select={setFilter} />
       <div className={classes.moduleSpacerSmall} />
       <BoxSx sortId={filter} />
     </div>

@@ -39,11 +39,6 @@ export const SignUp = () => {
     [setPassword]
   );
 
-  const goRecord = useCallback((name, password) => {
-    dispatch(signUp(name, password));
-    //eslint-disable-next-line
-  }, []);
-
   return (
     <Container maxWidth="sm" spacing={3}>
       <Grid container spacing={3}>
@@ -68,7 +63,7 @@ export const SignUp = () => {
         <Grid item xs={12} sm={8}>
           <LoginButton
             label="登録・kendamastart"
-            onClick={() => goRecord(name, password)}
+            onClick={() => dispatch(signUp(name, password))}
           />
         </Grid>
         <Grid item xs={12} sm={8}>

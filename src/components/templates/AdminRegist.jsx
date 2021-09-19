@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React from "react";
 import { useDispatch } from "react-redux";
 import Grid from "@material-ui/core/Grid";
 // import Iframe from "react-iframe";
@@ -14,10 +14,6 @@ export const AdminRegist = () => {
   const dispatch = useDispatch();
   const selector = useSelector((state) => state);
   const role = getRole(selector);
-  const backToAdminHome = useCallback(() => {
-    dispatch(push("/adminMenu"));
-    //eslint-disable-next-line
-  }, []);
 
   if (role !== "admin") {
     return <div>管理者ログインしてください</div>;
@@ -26,7 +22,10 @@ export const AdminRegist = () => {
     <React.Fragment>
       <Container maxWidth="sm">
         <Grid item xs={12}>
-          <BackButton onClick={backToAdminHome} label="戻る" />
+          <BackButton
+            onClick={() => dispatch(push("/adminMenu"))}
+            label="戻る"
+          />
           <UpdateButton onClick={() => dispatch(wazaRegist())} />
         </Grid>
       </Container>

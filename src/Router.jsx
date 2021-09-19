@@ -19,7 +19,7 @@ export const Router = () => {
     <Switch>
       <Route exact path={"/"} component={Top} />
       <Route path={"/record"} component={Record} />
-      <Route exact path={"/detail/:id"} component={WazaDetail} />
+      <Route exact key={"id"} path={"/detail/:id"} component={WazaDetail} />
       <Route path={"/signup"} component={SignUp} />
       <Route path={"/resultCharts"} component={ResultCharts} />
 

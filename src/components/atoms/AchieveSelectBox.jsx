@@ -2,7 +2,7 @@ import React from "react";
 import TextField from "@material-ui/core/TextField";
 import MenuItem from "@material-ui/core/MenuItem";
 
-const levels = [
+const options = [
   {
     value: "0",
     label: "できない",
@@ -38,12 +38,12 @@ export const AchieveSelectBox = (props) => {
       select
       label="達成度"
       defaultValue={props.defaultValue}
-      onChange={props.onChange}
+      onChange={(event) => props.select(event.target.value)}
       helperText="達成度を入力してください"
     >
-      {levels.map((level) => (
-        <MenuItem key={level.value} value={level.value}>
-          {level.label}
+      {options.map((option) => (
+        <MenuItem key={option.value} value={option.value}>
+          {option.label}
         </MenuItem>
       ))}
     </TextField>

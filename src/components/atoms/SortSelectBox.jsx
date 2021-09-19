@@ -7,6 +7,12 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
   sortSelect: {
+    [theme.breakpoints.down("xs")]: {
+      width: "100px",
+      position: "absolute",
+      top: "67px",
+      right: "0px",
+    },
     width: "200px",
     position: "absolute",
     top: "67px",
@@ -14,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const levels = [
+const options = [
   {
     value: "10",
     label: "番号順（昇）",
@@ -103,11 +109,11 @@ export const SortSelectBox = (props) => {
         labelId="demo-simple-select-label"
         id="demo-simple-select"
         value={props.value}
-        onChange={props.onChange}
+        onChange={(event) => props.select(event.target.value)}
       >
-        {levels.map((level) => (
-          <MenuItem key={level.value} value={level.value}>
-            {level.label}
+        {options.map((option) => (
+          <MenuItem key={option.value} value={option.value}>
+            {option.label}
           </MenuItem>
         ))}
       </Select>

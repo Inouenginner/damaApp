@@ -8,7 +8,6 @@ import { ConnectedRouter } from 'connected-react-router';
 import * as History from 'history';
 import { MuiThemeProvider } from '@material-ui/core';
 import './index.css';
-// import * as serviceWorker from './serviceWorker';
 import {theme} from "./assets/theme"
 
 const history = History.createBrowserHistory();

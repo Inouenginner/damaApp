@@ -98,7 +98,7 @@ export const signUp = (name, password) => {
         let maxId;
         let userId;
         const hashPass = sha512(password)
-        const wazaSum = 200;
+        const wazaSum = 212;
         //valid
         if(name === "" || password === "") {
             alert("必須項目が未入力です")
@@ -112,7 +112,7 @@ export const signUp = (name, password) => {
         })
         //すでに登録されたユーザ情報があるのならばidの取得
         if (sameIdUserData != null) {
-            alert("残念！同じ名前のユーザがいるので他の名前にしてください！")
+            alert("同じ名前のユーザがいるので他の名前にしてください！")
             return false;
         } else {
             //登録するidの採番
@@ -183,7 +183,11 @@ export const signUp = (name, password) => {
     }
 }
 //ユーザー各技進捗更新時
-export const updateDetail = (achieve,memo,favorite, wazaId, userId) => {
+export const updateDetail = (achieve,memo,favorite, wazaId, userId, moveTo) => {
+    console.log(achieve);
+    console.log(memo);
+    console.log(favorite);
+    console.log(wazaId);
     return async (dispatch, getState) => {
         console.log("update starting")
         const timestamp = FirebaseTimestamp.now()
@@ -202,7 +206,7 @@ export const updateDetail = (achieve,memo,favorite, wazaId, userId) => {
         nextDetails[wazaId - 1]["favorite"] = favorite;
         nextDetails[wazaId - 1]["makeDay"] = timestamp;
         dispatch(uploadWazaInfo(nextDetails));
-        dispatch(push('/record'))
+        dispatch(push(moveTo))
     }
 };
 
@@ -230,7 +234,7 @@ export const login = (name, password) => {
             userId = sameIdUserData["id"];
             console.log("already exist user");
         } else {
-            alert("君まだ登録してないね？？それか情報が間違ってます")
+            alert("ログイン情報が間違っています")
             return false;
         }
 

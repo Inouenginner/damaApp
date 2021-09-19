@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo, useState } from "react";
+import React, { useCallback, useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getUserId } from "../../reducks/users/selectors";
 import { push } from "connected-react-router";
@@ -6,7 +6,6 @@ import { useLocation } from "react-router";
 import { getWazas } from "../../reducks/wazas/selectors";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
-// import Iframe from "react-iframe";
 import Container from "@material-ui/core/Container";
 import { updateDetail } from "../../reducks/wazas/operations";
 import { AchieveSelectBox } from "../atoms/AchieveSelectBox";
@@ -14,17 +13,22 @@ import { MemoInput } from "../atoms/MemoInput";
 import { FavoriteCheckBox } from "../atoms/FavoriteCheckBox";
 import { UpdateButton } from "../atoms/UpdateButton";
 import { BackButton } from "../atoms/BackButton";
+import ReactPlayer from "react-player";
 import { getSignedIn } from "../../reducks/users/selectors";
-
+//import NavigateNextIcon from "@material-ui/icons/NavigateNext";
+//import NavigateBeforeIcon from "@material-ui/icons/NavigateBefore";
 import Link from "@material-ui/core/Link";
 import { Link as RouterLink } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   loader: {
     marginLeft: "auto",
     marginRight: "auto",
     textAlign: "center",
+  },
+  movie: {
+    [theme.breakpoints.down("xs")]: {},
   },
 }));
 
@@ -35,40 +39,45 @@ export const WazaDetail = () => {
   const location = useLocation();
   const wazaId = location.pathname.split("/detail/")[1];
   const selector = useSelector((state) => state);
-  const wazaList = getWazas(selector);
   const userId = getUserId(selector);
-  const targetWaza = wazaList[wazaId - 1];
   const isSignedIn = getSignedIn(selector);
+  const wazaList = getWazas(selector);
+  let targetWaza = wazaList[wazaId - 1];
 
-  // const [achieve, setAchieve] = useState(targetWaza.achieve),
-  //   [memo, setMemo] = useState(targetWaza.memo),
-  //   [favorite, setFavorite] = useState(targetWaza.favorite);
   const [achieve, setAchieve] = useState(0),
     [memo, setMemo] = useState(""),
     [favorite, setFavorite] = useState(false);
 
-  //関数のメモ化
-  const achieveChange = useCallback(
-    (event) => {
-      setAchieve(event.target.value);
-    },
-    [setAchieve]
-  );
   const memoChange = useCallback(
     (event) => {
       setMemo(event.target.value);
     },
     [setMemo]
   );
-  const handleCheckboxClick = useMemo(() => {
-    return (event) => {
+  const handleCheckboxClick = useCallback(
+    (event) => {
       setFavorite(event.target.checked);
-    };
-  }, [setFavorite]);
-  const backToRecord = useCallback(() => {
-    dispatch(push("/record"));
+    },
+    [setFavorite]
+  );
+
+  useEffect(() => {
+    const newWazaList = getWazas(selector);
+    const newTargetWaza = newWazaList[wazaId - 1];
+    setAchieve(newTargetWaza.achieve);
+    setMemo(newTargetWaza.memo);
+    setFavorite(newTargetWaza.favorite);
+    console.log("render!");
+    console.log(newTargetWaza.achieve);
     //eslint-disable-next-line
-  }, []);
+  }, [wazaId]);
+
+  const goNextPage = useCallback(
+    (achieve, memo, favorite, wazaId, userId, nextPath) => {
+      dispatch(updateDetail(achieve, memo, favorite, wazaId, userId, nextPath));
+    },
+    [wazaId]
+  );
 
   if (!isSignedIn) {
     return (
@@ -82,6 +91,34 @@ export const WazaDetail = () => {
   return (
     <React.Fragment>
       <Container maxWidth="sm">
+        {/* <Button
+          onClick={() =>
+            goNextPage(
+              achieve,
+              memo,
+              favorite,
+              wazaId,
+              userId,
+              "/detail/" + (Number(wazaId) - 1)
+            )
+          }
+        >
+          <NavigateBeforeIcon />
+        </Button>
+        <Button
+          onClick={() =>
+            goNextPage(
+              achieve,
+              memo,
+              favorite,
+              wazaId,
+              userId,
+              "/detail/" + (Number(wazaId) + 1)
+            )
+          }
+        >
+          <NavigateNextIcon />
+        </Button> */}
         <Typography variant="h4" gutterBottom>
           {targetWaza.waza}
         </Typography>
@@ -92,7 +129,7 @@ export const WazaDetail = () => {
           <Grid item xs={12} sm={8}>
             <AchieveSelectBox
               defaultValue={targetWaza.achieve}
-              onChange={achieveChange}
+              select={setAchieve}
             />
           </Grid>
           <Grid item xs={12}>
@@ -104,17 +141,28 @@ export const WazaDetail = () => {
               onChange={handleCheckboxClick}
             />
           </Grid>
-          <Grid item xs={12}>
+          <Grid item>
             <div>
-              <div>参照動画</div>
-              {/* <Iframe src={targetWaza.url} width="60%" height="70%"></Iframe> */}
+              <div>挑戦状動画</div>
+              <ReactPlayer
+                className={classes.movie}
+                url={targetWaza.url}
+                id="MainPlay"
+                loop
+                controls={true}
+                width="100%"
+                height="100%"
+              />
             </div>
           </Grid>
           <Grid item xs={12}>
-            <BackButton onClick={backToRecord} label="戻る" />
+            <BackButton
+              onClick={() => dispatch(push("/record"))}
+              label="戻る"
+            />
             <UpdateButton
               onClick={() =>
-                dispatch(updateDetail(achieve, memo, favorite, wazaId, userId))
+                goNextPage(achieve, memo, favorite, wazaId, userId, "/record")
               }
             />
           </Grid>
