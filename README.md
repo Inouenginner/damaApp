@@ -29,11 +29,11 @@ https://kendama-app.web.app
 ログイン画面
 ![Image 2](/public/dama-user-login.png)
 記録画面
-![Image 3](/public/dama-user-result.png)
+![Image 3](/public/dama-result.png)
 詳細画面
-![Image 4](/public/dama-user-detail.png)
+![Image 4](/public/dama-detail.png)
 成績チャート画面
-![Image 5](/public/dama-user-chart.png)
+![Image 5](/public/dama-chart.png)
 管理者ログイン画面
 ![Image 6](/public/dama-admin-login.png)
 管理者メニュー画面
