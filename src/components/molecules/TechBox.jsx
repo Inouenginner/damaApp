@@ -7,48 +7,12 @@ import { useDispatch } from "react-redux";
 import CardActionArea from "@material-ui/core/CardActionArea";
 
 const useStyles = makeStyles({
-  bg1: {
-    flex: "flexWrap",
-    backgroundColor: "tomato",
-    width: "90px",
-    height: "100px",
-    position: "relative",
-  },
-  bg2: {
-    flex: "flexWrap",
-    backgroundColor: "pink",
-    width: "90px",
-    height: "100px",
-    position: "relative",
-  },
-  bg3: {
-    flex: "flexWrap",
-    backgroundColor: "yellow",
-    width: "90px",
-    height: "100px",
-    position: "relative",
-  },
-  bg4: {
-    flex: "flexWrap",
-    backgroundColor: "palegreen",
-    width: "90px",
-    height: "100px",
-    position: "relative",
-  },
-  bg5: {
-    flex: "flexWrap",
-    backgroundColor: "mediumpurple",
-    width: "90px",
-    height: "100px",
-    position: "relative",
-  },
-  bg0: {
-    flex: "flexWrap",
-    backgroundColor: "white",
-    width: "90px",
-    height: "100px",
-    position: "relative",
-  },
+  bg1: { flex: "flexWrap", backgroundColor: "tomato", width: "90px", height: "100px", position: "relative" },
+  bg2: { flex: "flexWrap", backgroundColor: "pink", width: "90px", height: "100px", position: "relative" },
+  bg3: { flex: "flexWrap", backgroundColor: "yellow", width: "90px", height: "100px", position: "relative" },
+  bg4: { flex: "flexWrap", backgroundColor: "palegreen", width: "90px", height: "100px", position: "relative" },
+  bg5: { flex: "flexWrap", backgroundColor: "mediumpurple", width: "90px", height: "100px", position: "relative" },
+  bg0: { flex: "flexWrap", backgroundColor: "white", width: "90px", height: "100px", position: "relative" },
   title: {
     fontSize: 14,
   },
@@ -94,16 +58,9 @@ export default function TechBox(props) {
 
   return (
     <Card className={classes[bg_class]}>
-      <CardActionArea
-        onClick={() => dispatch(push("/detail/" + props.id))}
-        size="small"
-      >
+      <CardActionArea onClick={() => dispatch(push("/detail/" + props.id))} size="small">
         <div className={classes.titleBox}>
-          <Typography
-            className={classes.title}
-            color="textSecondary"
-            gutterBottom
-          >
+          <Typography className={classes.title} color="textSecondary" gutterBottom>
             {props.id}
           </Typography>
           <Typography color="textPrimary" className={classes.wazaName}>

@@ -2,9 +2,11 @@ import { logOutUserAction } from "../users/actions";
 import { loginAdminAction, logOutAdminAction } from "../users/actions";
 import { push } from "connected-react-router";
 import { db } from "../../firebase/index";
+import { nameMaxLength, passwordMaxLength } from "../../constants/common";
 import sha512 from "js-sha512";
 
 //ユーザー系のoperations
+
 //ログアウト時
 export const signOut = () => {
   return async (dispatch, getState) => {
@@ -33,10 +35,10 @@ export const adLogin = (adName, adPass) => {
     if (adminUserDate == null) {
       alert("その管理者はいません");
       return false;
-    } else if (adName.length > 16) {
+    } else if (adName.length > nameMaxLength) {
       alert("ログイン名が長いです");
       return false;
-    } else if (adPass.length > 16) {
+    } else if (adPass.length > passwordMaxLength) {
       alert("パスワードが長いです");
       return false;
     } else {

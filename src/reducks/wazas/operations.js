@@ -4,6 +4,7 @@ import { db, FirebaseTimestamp } from "../../firebase/index";
 import { push } from "connected-react-router";
 import axios from "axios";
 import sha512 from "js-sha512";
+import { wazaSum, nameMaxLength, passwordMaxLength, localDbJsonPath } from "../../constants/common";
 
 //技系のoperations(ユーザーの処理も行うことがある)
 
@@ -49,7 +50,7 @@ export const editWaza = (wazaId, wazaName, wazaLevel, wazaUrl) => {
 export const wazaRegist = () => {
   return async (dispatch) => {
     let wazas;
-    await axios.get("http://localhost:3000/wazas").then((res) => {
+    await axios.get(localDbJsonPath).then((res) => {
       wazas = res.data;
     });
     let batch = db.batch();
@@ -79,15 +80,14 @@ export const signUp = (name, password) => {
     let maxId;
     let userId;
     const hashPass = sha512(password);
-    const wazaSum = 212;
     //valid
     if (name === "" || password === "") {
       alert("必須項目が未入力です");
       return false;
-    } else if (name.length > 16) {
+    } else if (name.length > nameMaxLength) {
       alert("ログイン名が長いです");
       return false;
-    } else if (password.length > 16) {
+    } else if (password.length > passwordMaxLength) {
       alert("パスワードが長いです");
       return false;
     }
@@ -154,7 +154,7 @@ export const signUp = (name, password) => {
       if (wazasDoc.exists) {
         userWazaList.push(wazasDocOrderById.data());
       } else {
-        console.log("No such document!");
+        console.log("ユーザーに紐づく技情報がありません");
       }
     });
     //普通にdetailの情報は初期値なんだけどね（今はログイン時と揃えてる）
@@ -212,10 +212,10 @@ export const login = (name, password) => {
     if (name === "" || password === "") {
       alert("必須項目が未入力です");
       return false;
-    } else if (name.length > 16) {
+    } else if (name.length > nameMaxLength) {
       alert("ログイン名が長いです");
       return false;
-    } else if (password.length > 16) {
+    } else if (password.length > passwordMaxLength) {
       alert("パスワードが長いです");
       return false;
     }
