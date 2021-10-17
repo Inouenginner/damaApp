@@ -2,7 +2,6 @@ import React, { useCallback, useState } from "react";
 import { useDispatch } from "react-redux";
 import Grid from "@material-ui/core/Grid";
 import TextField from "@material-ui/core/TextField";
-import Container from "@material-ui/core/Container";
 import { UpdateButton } from "../atoms/button/UpdateButton";
 import { TransitionButton } from "../atoms/button/TransitionButton";
 import { push } from "connected-react-router";
@@ -54,21 +53,19 @@ export const AdminAdd = () => {
     return <div className="center">管理者ログインしてください</div>;
   }
   return (
-    <React.Fragment>
-      <Container maxWidth="sm">
-        <div>追加する技の各項目を入力してください</div>
-        {wazas.map((waza) => (
-          <Grid container spacing={3}>
-            <Grid item xs={12}>
-              <TextField variant="outlined" placeholder={waza.placeholder} name={waza.name} onChange={waza.onChange} />
-            </Grid>
+    <Grid item xs={12} sm={8}>
+      <div>追加する技の各項目を入力してください</div>
+      {wazas.map((waza) => (
+        <Grid container spacing={3}>
+          <Grid item xs={12}>
+            <TextField variant="outlined" placeholder={waza.placeholder} name={waza.name} onChange={waza.onChange} />
           </Grid>
-        ))}
-        <Grid item xs={12}>
-          <TransitionButton onClick={() => dispatch(push("/adminMenu"))} label="戻る" />
-          <UpdateButton onClick={() => dispatch(addWaza(wazaId, wazaName, wazaLevel, wazaUrl))} />
         </Grid>
-      </Container>
-    </React.Fragment>
+      ))}
+      <Grid item xs={12}>
+        <TransitionButton onClick={() => dispatch(push("/adminMenu"))} label="戻る" />
+        <UpdateButton onClick={() => dispatch(addWaza(wazaId, wazaName, wazaLevel, wazaUrl))} />
+      </Grid>
+    </Grid>
   );
 };

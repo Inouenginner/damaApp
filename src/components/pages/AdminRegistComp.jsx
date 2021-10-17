@@ -1,6 +1,5 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import { TransitionButton } from "../atoms/button/TransitionButton";
 import { push } from "connected-react-router";
@@ -16,13 +15,9 @@ export const AdminRegistComp = () => {
     return <div className="center">管理者ログインしてください</div>;
   }
   return (
-    <Container maxWidth="sm" spacing={3}>
-      <Grid container spacing={3}>
-        <Grid item xs={12} sm={8}>
-          <div className="red-text">最初の技登録が完了しました</div>
-          <TransitionButton onClick={() => dispatch(push("/adminMenu"))} label="戻る" />
-        </Grid>
-      </Grid>
-    </Container>
+    <Grid item xs={12} sm={8}>
+      <div className="red-text">最初の技登録が完了しました</div>
+      <TransitionButton onClick={() => dispatch(push("/adminMenu"))} label="戻る" />
+    </Grid>
   );
 };

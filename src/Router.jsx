@@ -14,14 +14,15 @@ import { AdminRegistComp } from "./components/pages/AdminRegistComp";
 import { AdminAddComp } from "./components/pages/AdminAddComp";
 import { SignUp } from "./components/pages/SignUp";
 import { HeaderLayout } from "./components/templates/HeaderLayout";
+import { HeaderContainerLayout } from "./components/templates/HeaderContainerLayout";
 
 export const Router = () => {
   return (
     <Switch>
       <Route exact path={"/"}>
-        <HeaderLayout>
+        <HeaderContainerLayout>
           <SignIn />
-        </HeaderLayout>
+        </HeaderContainerLayout>
       </Route>
       <Route path={"/record"}>
         <HeaderLayout>
@@ -34,9 +35,9 @@ export const Router = () => {
         </HeaderLayout>
       </Route>
       <Route path={"/signup"}>
-        <HeaderLayout>
+        <HeaderContainerLayout>
           <SignUp />
-        </HeaderLayout>
+        </HeaderContainerLayout>
       </Route>
       <Route path={"/resultCharts"}>
         <HeaderLayout>
@@ -45,44 +46,44 @@ export const Router = () => {
       </Route>
 
       <Route path={"/admin"}>
-        <HeaderLayout>
+        <HeaderContainerLayout>
           <Admin />
-        </HeaderLayout>
+        </HeaderContainerLayout>
       </Route>
       <Route path={"/adminMenu"}>
-        <HeaderLayout>
+        <HeaderContainerLayout>
           <AdminMenu />
-        </HeaderLayout>
+        </HeaderContainerLayout>
       </Route>
       <Route path={"/adminRegist"}>
-        <HeaderLayout>
+        <HeaderContainerLayout>
           <AdminRegist />
-        </HeaderLayout>
+        </HeaderContainerLayout>
       </Route>
       <Route path={"/adminAdd"}>
-        <HeaderLayout>
+        <HeaderContainerLayout>
           <AdminAdd />
-        </HeaderLayout>
+        </HeaderContainerLayout>
       </Route>
       <Route path={"/adminEdit"}>
-        <HeaderLayout>
+        <HeaderContainerLayout>
           <AdminEdit />
-        </HeaderLayout>
+        </HeaderContainerLayout>
       </Route>
       <Route path={"/registComp"}>
-        <HeaderLayout>
+        <HeaderContainerLayout>
           <AdminRegistComp />
-        </HeaderLayout>
+        </HeaderContainerLayout>
       </Route>
       <Route path={"/addComp"}>
-        <HeaderLayout>
+        <HeaderContainerLayout>
           <AdminAddComp />
-        </HeaderLayout>
+        </HeaderContainerLayout>
       </Route>
       <Route path={"/editComp"}>
-        <HeaderLayout>
+        <HeaderContainerLayout>
           <AdminEditComp />
-        </HeaderLayout>
+        </HeaderContainerLayout>
       </Route>
     </Switch>
   );
