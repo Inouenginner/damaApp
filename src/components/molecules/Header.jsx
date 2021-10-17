@@ -2,8 +2,8 @@ import React, { useCallback, useState } from "react";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
-import { ClosableDrawer } from "../molecules/ClosableDrawer";
-import { HeaderMenus } from "../molecules/HeaderMenus";
+import { ClosableDrawer } from "../organisms/ClosableDrawer";
+import { HeaderMenus } from "../atoms/HeaderMenus";
 
 export const Header = () => {
   const [open, setOpen] = useState(false);

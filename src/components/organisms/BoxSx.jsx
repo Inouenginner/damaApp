@@ -1,6 +1,6 @@
 import React from "react";
 import Box from "@material-ui/core/Box";
-import TechBox from "../atoms/TechBox";
+import TechBox from "../molecules/TechBox";
 import { useSelector } from "react-redux";
 import { getWazas } from "../../reducks/wazas/selectors";
 import { getLoading } from "../../reducks/users/selectors";

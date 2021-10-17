@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import BoxSx from "../molecules/BoxSx";
+import BoxSx from "../organisms/BoxSx";
 import { SortSelectBox } from "../atoms/SortSelectBox";
 import { makeStyles } from "@material-ui/core/styles";
 import { TransitionButton } from "../atoms/TransitionButton";

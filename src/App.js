@@ -1,6 +1,6 @@
 import React from "react";
 import { Router } from "./Router";
-import { Header } from "./components/organisms/Header";
+import { Header } from "./components/molecules/Header";
 import "./assets/style.css";
 import "./App.css";
 
