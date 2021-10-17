@@ -22,7 +22,6 @@ const useStyles = makeStyles((theme) => ({
       width: 256,
     },
   },
-  toolbar: theme.mixins.toolbar,
   drawerPaper: {
     width: 256,
   },
@@ -104,7 +103,7 @@ export const ClosableDrawer = (props) => {
           <Divider />
           <List>
             {filters.map((filter) => (
-              <ListItem button key={filter.id} onClick={(e) => filter.func(e, filter.value)}>
+              <ListItem button key={filter.id} onClick={(e) => alert("ただいま作成中です。。。")}>
                 <ListItemText primary={filter.label} />
               </ListItem>
             ))}
