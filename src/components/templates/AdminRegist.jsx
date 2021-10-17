@@ -1,10 +1,9 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import Grid from "@material-ui/core/Grid";
-// import Iframe from "react-iframe";
 import Container from "@material-ui/core/Container";
 import { UpdateButton } from "../atoms/UpdateButton";
-import { BackButton } from "../atoms/BackButton";
+import { TransitionButton } from "../atoms/TransitionButton";
 import { push } from "connected-react-router";
 import { wazaRegist } from "../../reducks/wazas/operations";
 import { useSelector } from "react-redux";
@@ -22,10 +21,7 @@ export const AdminRegist = () => {
     <React.Fragment>
       <Container maxWidth="sm">
         <Grid item xs={12}>
-          <BackButton
-            onClick={() => dispatch(push("/adminMenu"))}
-            label="戻る"
-          />
+          <TransitionButton onClick={() => dispatch(push("/adminMenu"))} label="戻る" />
           <UpdateButton onClick={() => dispatch(wazaRegist())} />
         </Grid>
       </Container>

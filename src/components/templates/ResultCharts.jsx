@@ -3,7 +3,7 @@ import { Bar } from "react-chartjs-2";
 import { useSelector } from "react-redux";
 import { getWazas } from "../../reducks/wazas/selectors";
 import "../../App.css";
-import { BackButton } from "../atoms/BackButton";
+import { TransitionButton } from "../atoms/TransitionButton";
 import { useDispatch } from "react-redux";
 import { push } from "connected-react-router";
 import { getSignedIn } from "../../reducks/users/selectors";
@@ -27,21 +27,11 @@ export const ResultCharts = () => {
   const isSignedIn = getSignedIn(selector);
 
   //各レベルの技の総数
-  const level1Amt = wazaDetails.filter(
-    (wazaDetail) => wazaDetail["level"] === 1
-  ).length;
-  const level2Amt = wazaDetails.filter(
-    (wazaDetail) => wazaDetail["level"] === 2
-  ).length;
-  const level3Amt = wazaDetails.filter(
-    (wazaDetail) => wazaDetail["level"] === 3
-  ).length;
-  const level4Amt = wazaDetails.filter(
-    (wazaDetail) => wazaDetail["level"] === 4
-  ).length;
-  const level5Amt = wazaDetails.filter(
-    (wazaDetail) => wazaDetail["level"] === 5
-  ).length;
+  const level1Amt = wazaDetails.filter((wazaDetail) => wazaDetail["level"] === 1).length;
+  const level2Amt = wazaDetails.filter((wazaDetail) => wazaDetail["level"] === 2).length;
+  const level3Amt = wazaDetails.filter((wazaDetail) => wazaDetail["level"] === 3).length;
+  const level4Amt = wazaDetails.filter((wazaDetail) => wazaDetail["level"] === 4).length;
+  const level5Amt = wazaDetails.filter((wazaDetail) => wazaDetail["level"] === 5).length;
 
   //各レベルの成功した技の数
   const level1Success = wazaDetails
@@ -78,13 +68,7 @@ export const ResultCharts = () => {
     datasets: [
       // 表示するデータセット
       {
-        data: [
-          level1Record,
-          level2Record,
-          level3Record,
-          level4Record,
-          level5Record,
-        ],
+        data: [level1Record, level2Record, level3Record, level4Record, level5Record],
         backgroundColor: "rgba(30, 144, 255, 1)",
         label: "技達成率（各難易度）",
       },
@@ -124,10 +108,7 @@ export const ResultCharts = () => {
     <div className="App">
       {/* グラフコンポーネントの呼び出し */}
       <Bar data={graphData} options={graphOption} />
-      <BackButton
-        onClick={() => dispatch(push("/record"))}
-        label="レコードへ戻る"
-      />
+      <TransitionButton onClick={() => dispatch(push("/record"))} label="レコードへ戻る" />
     </div>
   );
 };

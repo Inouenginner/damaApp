@@ -12,7 +12,7 @@ import { AchieveSelectBox } from "../atoms/AchieveSelectBox";
 import { MemoInput } from "../atoms/MemoInput";
 import { FavoriteCheckBox } from "../atoms/FavoriteCheckBox";
 import { UpdateButton } from "../atoms/UpdateButton";
-import { BackButton } from "../atoms/BackButton";
+import { TransitionButton } from "../atoms/TransitionButton";
 import ReactPlayer from "react-player";
 import { getSignedIn } from "../../reducks/users/selectors";
 //import NavigateNextIcon from "@material-ui/icons/NavigateNext";
@@ -150,7 +150,7 @@ export const WazaDetail = () => {
             </div>
           </Grid>
           <Grid item xs={12}>
-            <BackButton onClick={() => dispatch(push("/record"))} label="戻る" />
+            <TransitionButton onClick={() => dispatch(push("/record"))} label="戻る" />
             <UpdateButton onClick={() => goNextPage(achieve, memo, favorite, wazaId, userId, "/record")} />
           </Grid>
         </Grid>

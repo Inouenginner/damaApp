@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
-import { BackButton } from "../atoms/BackButton";
+import { TransitionButton } from "../atoms/TransitionButton";
 import { push } from "connected-react-router";
 import { adminSignOut } from "../../reducks/users/operations";
 import { useSelector } from "react-redux";
@@ -32,10 +32,10 @@ export const AdminMenu = () => {
       <Grid container spacing={3}>
         <Grid item xs={12} sm={8}>
           <div className={classes.text}>管理者画面</div>
-          <BackButton onClick={() => dispatch(push("/adminRegist"))} label="技登録へ進む" />
-          <BackButton onClick={() => dispatch(push("/adminAdd"))} label="技追加へ進む" />
-          <BackButton onClick={() => dispatch(push("/adminEdit"))} label="技編集へ進む" />
-          <BackButton onClick={() => dispatch(adminSignOut())} label="ログアウト" />
+          <TransitionButton onClick={() => dispatch(push("/adminRegist"))} label="技登録へ進む" />
+          <TransitionButton onClick={() => dispatch(push("/adminAdd"))} label="技追加へ進む" />
+          <TransitionButton onClick={() => dispatch(push("/adminEdit"))} label="技編集へ進む" />
+          <TransitionButton onClick={() => dispatch(adminSignOut())} label="ログアウト" />
         </Grid>
       </Grid>
     </Container>

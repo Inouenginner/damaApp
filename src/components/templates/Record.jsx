@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import BoxSx from "../molecules/BoxSx";
 import { SortSelectBox } from "../atoms/SortSelectBox";
 import { makeStyles } from "@material-ui/core/styles";
-import { BackButton } from "../atoms/BackButton";
+import { TransitionButton } from "../atoms/TransitionButton";
 import { signOut } from "../../reducks/users/operations";
 import { push } from "connected-react-router";
 import { getUserName } from "../../reducks/users/selectors";
@@ -45,11 +45,8 @@ export const Record = () => {
   }
   return (
     <div className={classes.root}>
-      <BackButton onClick={() => dispatch(signOut())} label="Logout" />
-      <BackButton
-        onClick={() => dispatch(push("/resultCharts"))}
-        label="成績チャートへ"
-      />
+      <TransitionButton onClick={() => dispatch(signOut())} label="Logout" />
+      <TransitionButton onClick={() => dispatch(push("/resultCharts"))} label="成績チャートへ" />
       <Typography variant="subtitle1" gutterBottom>
         ユーザ名：{username}さん
       </Typography>

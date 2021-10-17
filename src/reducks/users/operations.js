@@ -33,6 +33,12 @@ export const adLogin = (adName, adPass) => {
     if (adminUserDate == null) {
       alert("その管理者はいません");
       return false;
+    } else if (adName.length > 16) {
+      alert("ログイン名が長いです");
+      return false;
+    } else if (adPass.length > 16) {
+      alert("パスワードが長いです");
+      return false;
     } else {
       // 管理者ユーザーのstate更新
       const adminData = {

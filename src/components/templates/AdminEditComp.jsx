@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
-import { BackButton } from "../atoms/BackButton";
+import { TransitionButton } from "../atoms/TransitionButton";
 import { push } from "connected-react-router";
 import { useSelector } from "react-redux";
 import { getRole } from "../../reducks/users/selectors";
@@ -31,7 +31,7 @@ export const AdminEditComp = () => {
       <Grid container spacing={3}>
         <Grid item xs={12} sm={8}>
           <div className={classes.text}>更新が完了しました</div>
-          <BackButton onClick={() => dispatch(push("/adminMenu"))} label="戻る" />
+          <TransitionButton onClick={() => dispatch(push("/adminMenu"))} label="戻る" />
         </Grid>
       </Grid>
     </Container>

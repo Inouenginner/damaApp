@@ -84,6 +84,12 @@ export const signUp = (name, password) => {
     if (name === "" || password === "") {
       alert("必須項目が未入力です");
       return false;
+    } else if (name.length > 16) {
+      alert("ログイン名が長いです");
+      return false;
+    } else if (password.length > 16) {
+      alert("パスワードが長いです");
+      return false;
     }
     //ログインしたユーザ情報の取得
     await db
@@ -202,12 +208,19 @@ export const login = (name, password) => {
   return async (dispatch) => {
     let sameIdUserData;
     let userId;
-    const hashPass = sha512(password);
     //valid
     if (name === "" || password === "") {
       alert("必須項目が未入力です");
       return false;
+    } else if (name.length > 16) {
+      alert("ログイン名が長いです");
+      return false;
+    } else if (password.length > 16) {
+      alert("パスワードが長いです");
+      return false;
     }
+    //パスワードのハッシュ化
+    const hashPass = sha512(password);
     //ログインしたユーザ情報の取得
     await db
       .collection("users")
