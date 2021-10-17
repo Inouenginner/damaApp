@@ -7,12 +7,21 @@ import sha512 from "js-sha512";
 import { wazaSum, nameMaxLength, passwordMaxLength, localDbJsonPath } from "../../constants/common";
 
 //技系のoperations(ユーザーの処理も行うことがある)
+//コレクション参照の定数化
+const wazaRef = db.collection("wazas");
+const userRef = db.collection("users");
 
 //管理者画面からの技追加登録
+//editと共通化できそう
 export const addWaza = (wazaId, wazaName, wazaLevel, wazaUrl) => {
   return async (dispatch) => {
+    //valid
+    if (wazaId === "" || wazaName === "" || wazaLevel === "" || wazaUrl === "") {
+      alert("必須項目が未入力です");
+      return false;
+    }
     let batch = db.batch();
-    const newWazaRef = db.collection("wazas").doc(wazaId.toString());
+    const newWazaRef = wazaRef.doc(wazaId.toString());
     batch.set(newWazaRef, {
       favoriteSum: 0,
       id: wazaId.toString(),
@@ -30,8 +39,13 @@ export const addWaza = (wazaId, wazaName, wazaLevel, wazaUrl) => {
 //管理者画面からの技編集
 export const editWaza = (wazaId, wazaName, wazaLevel, wazaUrl) => {
   return async (dispatch) => {
+    //valid
+    if (wazaId === "" || wazaName === "" || wazaLevel === "" || wazaUrl === "") {
+      alert("必須項目が未入力です");
+      return false;
+    }
     let batch = db.batch();
-    const updateWazaRef = db.collection("wazas").doc(wazaId.toString());
+    const updateWazaRef = wazaRef.doc(wazaId.toString());
     batch.set(updateWazaRef, {
       favoriteSum: 0,
       id: wazaId.toString(),
@@ -54,7 +68,6 @@ export const wazaRegist = () => {
       wazas = res.data;
     });
     let batch = db.batch();
-    const wazaRef = db.collection("wazas");
     // 技データベースの初期設定
     wazas.forEach(function (waza, index) {
       let wazaEachRef = wazaRef.doc((index + 1).toString());
@@ -92,8 +105,7 @@ export const signUp = (name, password) => {
       return false;
     }
     //ログインしたユーザ情報の取得
-    await db
-      .collection("users")
+    await userRef
       .where("name", "==", name)
       .where("password", "==", hashPass)
       .get()
@@ -108,8 +120,7 @@ export const signUp = (name, password) => {
       return false;
     } else {
       //登録するidの採番
-      await db
-        .collection("users")
+      await userRef
         .orderBy("id", "desc")
         .limit(1)
         .get()
@@ -130,13 +141,13 @@ export const signUp = (name, password) => {
       //ユーザ情報のDB登録
       const timestamp = FirebaseTimestamp.now();
       let batch = db.batch();
-      const userStandardRef = db.collection("users").doc(userId.toString());
+      const userStandardRef = userRef.doc(userId.toString());
       batch.set(userStandardRef, { id: userId, password: hashPass, name: name, registerDate: timestamp, role: "user" });
       // ユーザごとの各技達成度等詳細DB登録（処理速度最速while文使用）
       let index = 1;
       while (index <= wazaSum) {
-        let detailsRef = db.collection("users").doc(userId.toString()).collection("results").doc(index.toString());
-        batch.set(detailsRef, { id: index, achieve: 0, memo: "", favorite: false, makeDay: timestamp });
+        let detailsEachRef = userRef.doc(userId.toString()).collection("results").doc(index.toString());
+        batch.set(detailsEachRef, { id: index, achieve: 0, memo: "", favorite: false, makeDay: timestamp });
         index++;
       }
       // バッチ処理の完了
@@ -147,9 +158,8 @@ export const signUp = (name, password) => {
     let userWazaList = [];
     let joinedList = [];
     console.log("id:" + userId);
-    const wazasRef = db.collection("wazas");
-    const wazasDoc = await wazasRef.doc(userId.toString()).get();
-    const wazasDocsOrderById = await wazasRef.orderBy("id", "asc").get();
+    const wazasDoc = await wazaRef.doc(userId.toString()).get();
+    const wazasDocsOrderById = await wazaRef.orderBy("id", "asc").get();
     wazasDocsOrderById.forEach((wazasDocOrderById) => {
       if (wazasDoc.exists) {
         userWazaList.push(wazasDocOrderById.data());
@@ -157,8 +167,8 @@ export const signUp = (name, password) => {
         console.log("ユーザーに紐づく技情報がありません");
       }
     });
-    //普通にdetailの情報は初期値なんだけどね（今はログイン時と揃えてる）
-    const detailsRef = db.collection("users").doc(userId.toString()).collection("results");
+    //登録時、detailの情報は初期値（ただ処理はログイン時と揃えてる）
+    const detailsRef = userRef.doc(userId.toString()).collection("results");
     const detailsDocsOrderById = await detailsRef.orderBy("id", "asc").get();
     detailsDocsOrderById.forEach((detailsDocOrderById) => {
       if (detailsDocOrderById.exists) {
@@ -179,13 +189,14 @@ export const signUp = (name, password) => {
     dispatch(push("/record"));
   };
 };
+
 //ユーザー各技進捗更新時
 export const updateDetail = (achieve, memo, favorite, wazaId, userId, moveTo) => {
   return async (dispatch, getState) => {
     console.log("update starting");
     const timestamp = FirebaseTimestamp.now();
     //DBへの登録
-    const detailsRef = db.collection("users").doc(userId.toString()).collection("results").doc(wazaId);
+    const detailsRef = userRef.doc(userId.toString()).collection("results").doc(wazaId);
     await detailsRef.update({
       achieve: Number(achieve),
       memo: memo,
@@ -222,8 +233,7 @@ export const login = (name, password) => {
     //パスワードのハッシュ化
     const hashPass = sha512(password);
     //ログインしたユーザ情報の取得
-    await db
-      .collection("users")
+    await userRef
       .where("name", "==", name)
       .where("password", "==", hashPass)
       .get()
@@ -244,9 +254,8 @@ export const login = (name, password) => {
     // 技のstate取得(技の基本情報と達成度の詳細情報を連結した上で)
     let userWazaList = [];
     console.log("id:" + userId);
-    const wazasRef = db.collection("wazas");
-    const wazasDoc = await wazasRef.doc(userId.toString()).get();
-    const wazasDocsOrderById = await wazasRef.orderBy("id", "asc").get();
+    const wazasDoc = await wazaRef.doc(userId.toString()).get();
+    const wazasDocsOrderById = await wazaRef.orderBy("id", "asc").get();
     wazasDocsOrderById.forEach((wazasDocOrderById) => {
       if (wazasDoc.exists) {
         userWazaList.push(wazasDocOrderById.data());
@@ -254,7 +263,7 @@ export const login = (name, password) => {
         console.log("No such document!");
       }
     });
-    const detailsRef = db.collection("users").doc(userId.toString()).collection("results");
+    const detailsRef = userRef.doc(userId.toString()).collection("results");
     const detailsDocsOrderById = await detailsRef.orderBy("id", "asc").get();
     detailsDocsOrderById.forEach((detailsDocOrderById) => {
       if (detailsDocOrderById.exists) {
