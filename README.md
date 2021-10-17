@@ -48,4 +48,4 @@ React.js による SPA 開発であるため、画面間の移動が非常に早
 # Author
 
 Hiroki Inoue
-_pssy5xfd@gmail.com
+pssy5xfd@gmail.com
