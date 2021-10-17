@@ -41,34 +41,12 @@ export const ClosableDrawer = (props) => {
   };
 
   const [filters] = useState([
-    {
-      func: selectMenu,
-      label: "問い合わせ（作成中。成績一覧画面へ遷移します）",
-      id: "inquiry",
-      value: "/record",
-    },
-    {
-      func: selectMenu,
-      label: "作者プロフィール（作成中。成績一覧画面へ遷移します）",
-      id: "author",
-      value: "/record",
-    },
+    { func: selectMenu, label: "問い合わせ（作成中。成績一覧画面へ遷移します）", id: "inquiry", value: "/record" },
+    { func: selectMenu, label: "作者プロフィール（作成中。成績一覧画面へ遷移します）", id: "author", value: "/record" },
   ]);
   const menus = [
-    {
-      func: selectMenu,
-      label: "成績一覧へ",
-      icon: <AppsIcon />,
-      id: "record",
-      value: "/record",
-    },
-    {
-      func: selectMenu,
-      label: "チャートへ",
-      icon: <EqualizerIcon />,
-      id: "chart",
-      value: "/resultCharts",
-    },
+    { func: selectMenu, label: "成績一覧へ", icon: <AppsIcon />, id: "record", value: "/record" },
+    { func: selectMenu, label: "チャートへ", icon: <EqualizerIcon />, id: "chart", value: "/resultCharts" },
   ];
 
   return (
