@@ -6,6 +6,7 @@ import Grid from "@material-ui/core/Grid";
 import { NameInput } from "../atoms/input/NameInput";
 import { PasswordInput } from "../atoms/input/PasswordInput";
 import { LoginButton } from "../atoms/button/LoginButton";
+import { LoginContent } from "../organisms/LoginContent";
 
 export const Admin = () => {
   const dispatch = useDispatch();
@@ -28,18 +29,13 @@ export const Admin = () => {
   return (
     <Container maxWidth="sm" spacing={3}>
       <Grid container spacing={3}>
-        <Grid item xs={12} sm={8}>
-          <div className="red-text">管理者画面</div>
-        </Grid>
-        <Grid item xs={12} sm={8}>
-          <NameInput name={name} onChange={nameChange} />
-        </Grid>
-        <Grid item xs={12} sm={8}>
-          <PasswordInput name={password} onChange={passwordChange} />
-        </Grid>
-        <Grid item xs={12} sm={8}>
-          <LoginButton label="管理者ログイン" onClick={() => dispatch(adLogin(name, password))} />
-        </Grid>
+        <LoginContent
+          title="管理者ログイン画面"
+          message="・管理者ログインしてください"
+          transitionLabel="管理者ログインする"
+          transitionMove="() => dispatch(adLogin(name, password))"
+          haveLink="false"
+        />
       </Grid>
     </Container>
   );

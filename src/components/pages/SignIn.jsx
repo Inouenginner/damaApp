@@ -8,6 +8,7 @@ import { PasswordInput } from "../atoms/input/PasswordInput";
 import { LoginButton } from "../atoms/button/LoginButton";
 import Link from "@material-ui/core/Link";
 import { Link as RouterLink } from "react-router-dom";
+import { LoginContent } from "../organisms/LoginContent";
 
 export const SignIn = () => {
   const dispatch = useDispatch();
@@ -31,6 +32,16 @@ export const SignIn = () => {
   return (
     <Container maxWidth="sm" spacing={3}>
       <Grid container spacing={3}>
+        <LoginContent
+          title="ログイン画面"
+          message="・登録したニックネームとパスワードを入力してください"
+          transitionLabel="kendamastart"
+          transitionMove="() => dispatch(login(name, password))"
+          haveLink="true"
+          linkLabel="新規登録に進む"
+          linkComponent="{RouterLink}"
+          linkTransitionTo="/signup"
+        />
         <Grid item xs={12} sm={8}>
           <h1>ログイン画面</h1>
         </Grid>
