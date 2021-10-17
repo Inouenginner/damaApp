@@ -1,36 +1,89 @@
 import React from "react";
 import { Route, Switch } from "react-router";
-import { Record } from "../src/components/templates/Record";
-import { SignIn } from "./components/templates/SignIn";
-import { WazaDetail } from "../src/components/templates/WazaDetail";
-import { Admin } from "../src/components/templates/Admin";
-import { AdminEditComp } from "./components/templates/AdminEditComp";
-import { AdminEdit } from "./components/templates/AdminEdit";
-import { AdminMenu } from "../src/components/templates/AdminMenu";
-import { AdminAdd } from "../src/components/templates/AdminAdd";
-import { AdminRegist } from "../src/components/templates/AdminRegist";
-import { ResultCharts } from "./components/templates/ResultCharts";
-import { AdminRegistComp } from "./components/templates/AdminRegistComp";
-import { AdminAddComp } from "./components/templates/AdminAddComp";
-import { SignUp } from "./components/templates/SignUp";
+import { Record } from "./components/pages/Record";
+import { SignIn } from "./components/pages/SignIn";
+import { WazaDetail } from "../src/components/pages/WazaDetail";
+import { Admin } from "./components/pages/Admin";
+import { AdminEditComp } from "./components/pages/AdminEditComp";
+import { AdminEdit } from "./components/pages/AdminEdit";
+import { AdminMenu } from "../src/components/pages/AdminMenu";
+import { AdminAdd } from "./components/pages/AdminAdd";
+import { AdminRegist } from "../src/components/pages/AdminRegist";
+import { ResultCharts } from "./components/pages/ResultCharts";
+import { AdminRegistComp } from "./components/pages/AdminRegistComp";
+import { AdminAddComp } from "./components/pages/AdminAddComp";
+import { SignUp } from "./components/pages/SignUp";
+import { HeaderLayout } from "./components/templates/HeaderLayout";
 
 export const Router = () => {
   return (
     <Switch>
-      <Route exact path={"/"} component={SignIn} />
-      <Route path={"/record"} component={Record} />
-      <Route exact key={"id"} path={"/detail/:id"} component={WazaDetail} />
-      <Route path={"/signup"} component={SignUp} />
-      <Route path={"/resultCharts"} component={ResultCharts} />
+      <Route exact path={"/"}>
+        <HeaderLayout>
+          <SignIn />
+        </HeaderLayout>
+      </Route>
+      <Route path={"/record"}>
+        <HeaderLayout>
+          <Record />
+        </HeaderLayout>
+      </Route>
+      <Route exact key={"id"} path={"/detail/:id"}>
+        <HeaderLayout>
+          <WazaDetail />
+        </HeaderLayout>
+      </Route>
+      <Route path={"/signup"}>
+        <HeaderLayout>
+          <SignUp />
+        </HeaderLayout>
+      </Route>
+      <Route path={"/resultCharts"}>
+        <HeaderLayout>
+          <ResultCharts />
+        </HeaderLayout>
+      </Route>
 
-      <Route path={"/admin"} component={Admin} />
-      <Route path={"/adminMenu"} component={AdminMenu} />
-      <Route path={"/adminRegist"} component={AdminRegist} />
-      <Route path={"/adminAdd"} component={AdminAdd} />
-      <Route path={"/adminEdit"} component={AdminEdit} />
-      <Route path={"/registComp"} component={AdminRegistComp} />
-      <Route path={"/addComp"} component={AdminAddComp} />
-      <Route path={"/editComp"} component={AdminEditComp} />
+      <Route path={"/admin"}>
+        <HeaderLayout>
+          <Admin />
+        </HeaderLayout>
+      </Route>
+      <Route path={"/adminMenu"}>
+        <HeaderLayout>
+          <AdminMenu />
+        </HeaderLayout>
+      </Route>
+      <Route path={"/adminRegist"}>
+        <HeaderLayout>
+          <AdminRegist />
+        </HeaderLayout>
+      </Route>
+      <Route path={"/adminAdd"}>
+        <HeaderLayout>
+          <AdminAdd />
+        </HeaderLayout>
+      </Route>
+      <Route path={"/adminEdit"}>
+        <HeaderLayout>
+          <AdminEdit />
+        </HeaderLayout>
+      </Route>
+      <Route path={"/registComp"}>
+        <HeaderLayout>
+          <AdminRegistComp />
+        </HeaderLayout>
+      </Route>
+      <Route path={"/addComp"}>
+        <HeaderLayout>
+          <AdminAddComp />
+        </HeaderLayout>
+      </Route>
+      <Route path={"/editComp"}>
+        <HeaderLayout>
+          <AdminEditComp />
+        </HeaderLayout>
+      </Route>
     </Switch>
   );
 };

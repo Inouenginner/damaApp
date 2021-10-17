@@ -3,7 +3,7 @@ import { Bar } from "react-chartjs-2";
 import { useSelector } from "react-redux";
 import { getWazas } from "../../reducks/wazas/selectors";
 import "../../App.css";
-import { TransitionButton } from "../atoms/TransitionButton";
+import { TransitionButton } from "../atoms/button/TransitionButton";
 import { useDispatch } from "react-redux";
 import { push } from "connected-react-router";
 import { getSignedIn } from "../../reducks/users/selectors";

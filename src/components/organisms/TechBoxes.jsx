@@ -6,7 +6,7 @@ import { getWazas } from "../../reducks/wazas/selectors";
 import { getLoading } from "../../reducks/users/selectors";
 import Loader from "react-loader-spinner";
 
-export default function BoxSx(props) {
+export default function TechBoxes(props) {
   const selector = useSelector((state) => state);
   let wazas = getWazas(selector);
   const isLoading = getLoading(selector);

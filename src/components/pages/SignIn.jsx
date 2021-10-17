@@ -3,9 +3,9 @@ import { useDispatch } from "react-redux";
 import { login } from "../../reducks/wazas/operations";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
-import { NameInput } from "../atoms/NameInput";
-import { PasswordInput } from "../atoms/PasswordInput";
-import { LoginButton } from "../atoms/LoginButton";
+import { NameInput } from "../atoms/input/NameInput";
+import { PasswordInput } from "../atoms/input/PasswordInput";
+import { LoginButton } from "../atoms/button/LoginButton";
 import Link from "@material-ui/core/Link";
 import { Link as RouterLink } from "react-router-dom";
 
