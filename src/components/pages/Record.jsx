@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import BoxSx from "../organisms/BoxSx";
-import { SortSelectBox } from "../atoms/SortSelectBox";
+import TechBoxes from "../organisms/TechBoxes";
+import { SortSelectBox } from "../atoms/box/SortSelectBox";
 import { makeStyles } from "@material-ui/core/styles";
-import { TransitionButton } from "../atoms/TransitionButton";
+import { TransitionButton } from "../atoms/button/TransitionButton";
 import { signOut } from "../../reducks/users/operations";
 import { push } from "connected-react-router";
 import { getUserName } from "../../reducks/users/selectors";
@@ -44,7 +44,7 @@ export const Record = () => {
       </Typography>
       <SortSelectBox value={filter} select={setFilter} />
       <div className={classes.h20} />
-      <BoxSx sortId={filter} />
+      <TechBoxes sortId={filter} />
     </>
   );
 };
