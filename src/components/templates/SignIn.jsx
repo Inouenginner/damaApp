@@ -6,21 +6,10 @@ import Grid from "@material-ui/core/Grid";
 import { NameInput } from "../atoms/NameInput";
 import { PasswordInput } from "../atoms/PasswordInput";
 import { LoginButton } from "../atoms/LoginButton";
-import { makeStyles } from "@material-ui/core/styles";
 import Link from "@material-ui/core/Link";
 import { Link as RouterLink } from "react-router-dom";
 
-const useStyles = makeStyles((theme) => ({
-  text: {
-    borderRadius: "4px",
-    color: "red",
-    fontSize: "20px",
-    fontWeight: "500",
-  },
-}));
-
 export const SignIn = () => {
-  const classes = useStyles();
   const dispatch = useDispatch();
 
   const [name, setName] = useState("");
@@ -46,7 +35,7 @@ export const SignIn = () => {
           <h1>ログイン画面</h1>
         </Grid>
         <Grid item xs={12} sm={8}>
-          <div className={classes.text}>・登録したニックネームとパスワードを入力してください</div>
+          <div className="red-text">・登録したニックネームとパスワードを入力してください</div>
         </Grid>
         <Grid item xs={12} sm={8}>
           <NameInput name={name} onChange={nameChange} />

@@ -51,7 +51,7 @@ export const AdminAdd = () => {
   ];
 
   if (role !== "admin") {
-    return <div>管理者ログインしてください</div>;
+    return <div className="center">管理者ログインしてください</div>;
   }
   return (
     <React.Fragment>

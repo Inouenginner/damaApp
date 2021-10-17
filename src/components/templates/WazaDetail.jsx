@@ -19,22 +19,8 @@ import { getSignedIn } from "../../reducks/users/selectors";
 //import NavigateBeforeIcon from "@material-ui/icons/NavigateBefore";
 import Link from "@material-ui/core/Link";
 import { Link as RouterLink } from "react-router-dom";
-import { makeStyles } from "@material-ui/core/styles";
-
-const useStyles = makeStyles((theme) => ({
-  loader: {
-    marginLeft: "auto",
-    marginRight: "auto",
-    textAlign: "center",
-  },
-  movie: {
-    [theme.breakpoints.down("xs")]: {},
-  },
-}));
 
 export const WazaDetail = () => {
-  const classes = useStyles();
-
   const dispatch = useDispatch();
   const location = useLocation();
   const wazaId = location.pathname.split("/detail/")[1];
@@ -81,7 +67,7 @@ export const WazaDetail = () => {
 
   if (!isSignedIn) {
     return (
-      <div className={classes.loader}>
+      <div className="center">
         <Link component={RouterLink} to="/">
           ログインしてね
         </Link>
@@ -138,15 +124,7 @@ export const WazaDetail = () => {
           <Grid item>
             <div>
               <div>挑戦状動画</div>
-              <ReactPlayer
-                className={classes.movie}
-                url={targetWaza.url}
-                id="MainPlay"
-                loop
-                controls={true}
-                width="100%"
-                height="100%"
-              />
+              <ReactPlayer url={targetWaza.url} id="MainPlay" loop controls={true} width="100%" height="100%" />
             </div>
           </Grid>
           <Grid item xs={12}>

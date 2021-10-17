@@ -1,3 +1,11 @@
+/*********** 独自定義 ***********/
+.red-text {
+  color: red;
+}
+.center {
+  margin: 0 auto;
+  text-align: center;
+}
 /*********** Module Spacer ***********/
 .module-spacer--extra-extra-small {
   height: 12px;
@@ -52,11 +60,6 @@
   color: #444;
   font-weight: 600;
   margin-top: 1rem;
-  text-align: center;
-}
-
-.center {
-  margin: 0 auto;
   text-align: center;
 }
 

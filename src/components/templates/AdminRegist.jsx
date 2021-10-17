@@ -15,7 +15,7 @@ export const AdminRegist = () => {
   const role = getRole(selector);
 
   if (role !== "admin") {
-    return <div>管理者ログインしてください</div>;
+    return <div className="center">管理者ログインしてください</div>;
   }
   return (
     <React.Fragment>

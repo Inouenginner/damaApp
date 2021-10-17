@@ -6,21 +6,10 @@ import Grid from "@material-ui/core/Grid";
 import { NameInput } from "../atoms/NameInput";
 import { PasswordInput } from "../atoms/PasswordInput";
 import { LoginButton } from "../atoms/LoginButton";
-import { makeStyles } from "@material-ui/core/styles";
 import Link from "@material-ui/core/Link";
 import { Link as RouterLink } from "react-router-dom";
 
-const useStyles = makeStyles((theme) => ({
-  text: {
-    borderRadius: "4px",
-    color: "red",
-    fontSize: "20px",
-    fontWeight: "500",
-  },
-}));
-
 export const SignUp = () => {
-  const classes = useStyles();
   const dispatch = useDispatch();
 
   const [name, setName] = useState("");
@@ -46,25 +35,16 @@ export const SignUp = () => {
           <h1>新規ユーザー登録画面</h1>
         </Grid>
         <Grid item xs={12} sm={8}>
-          <div className={classes.text}>
-            ・ニックネームとパスワードを入力してください（今後ログインに使用します）
-          </div>
+          <div className="red-text">・ニックネームとパスワードを入力してください（今後ログインに使用します）</div>
         </Grid>
         <Grid item xs={12} sm={8}>
           <NameInput name={name} onChange={nameChange} />
         </Grid>
         <Grid item xs={12} sm={8}>
-          <PasswordInput
-            placeholder={"パスワード"}
-            name={password}
-            onChange={passwordChange}
-          />
+          <PasswordInput placeholder={"パスワード"} name={password} onChange={passwordChange} />
         </Grid>
         <Grid item xs={12} sm={8}>
-          <LoginButton
-            label="登録・kendamastart"
-            onClick={() => dispatch(signUp(name, password))}
-          />
+          <LoginButton label="登録・kendamastart" onClick={() => dispatch(signUp(name, password))} />
         </Grid>
         <Grid item xs={12} sm={8}>
           <Link component={RouterLink} to="/">

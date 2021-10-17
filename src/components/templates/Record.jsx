@@ -12,16 +12,8 @@ import { getSignedIn } from "../../reducks/users/selectors";
 import Link from "@material-ui/core/Link";
 import { Link as RouterLink } from "react-router-dom";
 
-const useStyles = makeStyles((theme) => ({
-  loader: {
-    marginLeft: "auto",
-    marginRight: "auto",
-    textAlign: "center",
-  },
-  root: {
-    flexGrow: 1,
-  },
-  moduleSpacerSmall: {
+const useStyles = makeStyles(() => ({
+  h20: {
     height: "20px",
   },
 }));
@@ -36,7 +28,7 @@ export const Record = () => {
 
   if (!isSignedIn) {
     return (
-      <div className={classes.loader}>
+      <div className="center">
         <Link component={RouterLink} to="/">
           ログインしてね
         </Link>
@@ -44,15 +36,15 @@ export const Record = () => {
     );
   }
   return (
-    <div className={classes.root}>
+    <>
       <TransitionButton onClick={() => dispatch(signOut())} label="Logout" />
       <TransitionButton onClick={() => dispatch(push("/resultCharts"))} label="成績チャートへ" />
       <Typography variant="subtitle1" gutterBottom>
         ユーザ名：{username}さん
       </Typography>
       <SortSelectBox value={filter} select={setFilter} />
-      <div className={classes.moduleSpacerSmall} />
+      <div className={classes.h20} />
       <BoxSx sortId={filter} />
-    </div>
+    </>
   );
 };

@@ -5,18 +5,8 @@ import { useSelector } from "react-redux";
 import { getWazas } from "../../reducks/wazas/selectors";
 import { getLoading } from "../../reducks/users/selectors";
 import Loader from "react-loader-spinner";
-import { makeStyles } from "@material-ui/core/styles";
-
-const useStyles = makeStyles(() => ({
-  loader: {
-    marginLeft: "auto",
-    marginRight: "auto",
-    textAlign: "center",
-  },
-}));
 
 export default function BoxSx(props) {
-  const classes = useStyles();
   const selector = useSelector((state) => state);
   let wazas = getWazas(selector);
   const isLoading = getLoading(selector);
@@ -143,15 +133,8 @@ export default function BoxSx(props) {
         align-items="center"
         flexWrap="wrap"
       >
-        <div className={classes.loader}>
-          <Loader
-            type="Puff"
-            color="#00BFFF"
-            height={300}
-            width={300}
-            timeout={3000}
-            className={classes.loader}
-          />
+        <div className="center">
+          <Loader type="Puff" color="#00BFFF" height={300} width={300} timeout={3000} className="center" />
           準備中
         </div>
       </Box>
@@ -178,7 +161,7 @@ export default function BoxSx(props) {
           />
         ))
       ) : (
-        <div className={classes.loader}>該当なし</div>
+        <div className="center">該当なし</div>
       )}
     </Box>
   );

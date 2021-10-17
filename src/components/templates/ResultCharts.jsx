@@ -9,18 +9,8 @@ import { push } from "connected-react-router";
 import { getSignedIn } from "../../reducks/users/selectors";
 import Link from "@material-ui/core/Link";
 import { Link as RouterLink } from "react-router-dom";
-import { makeStyles } from "@material-ui/core/styles";
-
-const useStyles = makeStyles(() => ({
-  loader: {
-    marginLeft: "auto",
-    marginRight: "auto",
-    textAlign: "center",
-  },
-}));
 
 export const ResultCharts = () => {
-  const classes = useStyles();
   const dispatch = useDispatch();
   const selector = useSelector((state) => state);
   const wazaDetails = getWazas(selector);
@@ -97,7 +87,7 @@ export const ResultCharts = () => {
 
   if (!isSignedIn) {
     return (
-      <div className={classes.loader}>
+      <div className="center">
         <Link component={RouterLink} to="/">
           ログインしてね
         </Link>
