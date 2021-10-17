@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useState, useRef } from "react";
 import { useDispatch } from "react-redux";
 import { login } from "../../reducks/wazas/operations";
 import Container from "@material-ui/core/Container";
@@ -22,11 +22,34 @@ const useStyles = makeStyles((theme) => ({
 export const SignIn = () => {
   const classes = useStyles();
   const dispatch = useDispatch();
+  const inputNameRef = useRef(null);
+  const [inputNameError, setInputNameError] = useState(false);
+  const inputPassRef = useRef(null);
+  const [inputPassError, setInputPassError] = useState(false);
 
+  const handleNameClick = () => {
+    inputNameRef.current.focus();
+    console.log("inputEl.current:", inputNameRef.current);
+    //inputEl.current: <input type="text">
+  };
+  const handlePassClick = () => {
+    inputPassRef.current.focus();
+    console.log("inputEl.current:", inputPassRef.current);
+    //inputEl.current: <input type="text">
+  };
   const [name, setName] = useState("");
   const nameChange = useCallback(
     (event) => {
-      setName(event.target.value);
+      console.log(inputNameRef);
+      if (inputNameRef.current) {
+        const ref = inputNameRef.current;
+        if (!ref.validity.valid) {
+          setInputNameError(true);
+        } else {
+          setInputNameError(false);
+          setName(event.target.value);
+        }
+      }
     },
     [setName]
   );
@@ -34,7 +57,15 @@ export const SignIn = () => {
   const [password, setPassword] = useState("");
   const passwordChange = useCallback(
     (event) => {
-      setPassword(event.target.value);
+      if (inputPassRef.current) {
+        const ref = inputPassRef.current;
+        if (!ref.validity.valid) {
+          setInputPassError(true);
+        } else {
+          setInputPassError(false);
+          setPassword(event.target.value);
+        }
+      }
     },
     [setPassword]
   );
@@ -49,10 +80,22 @@ export const SignIn = () => {
           <div className={classes.text}>・登録したニックネームとパスワードを入力してください</div>
         </Grid>
         <Grid item xs={12} sm={8}>
-          <NameInput name={name} onChange={nameChange} />
+          <NameInput
+            name={name}
+            inputError={inputNameError}
+            inputRef={inputNameRef}
+            onChange={nameChange}
+            onClick={handleNameClick}
+          />
         </Grid>
         <Grid item xs={12} sm={8}>
-          <PasswordInput placeholder={"パスワード"} name={password} onChange={passwordChange} />
+          <PasswordInput
+            name={password}
+            inputError={inputPassRef}
+            inputRef={inputPassError}
+            onChange={passwordChange}
+            onClick={handlePassClick}
+          />
         </Grid>
         <Grid item xs={12} sm={8}>
           <LoginButton label="kendamastart" onClick={() => dispatch(login(name, password))} />
