@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export const EditComp = () => {
+export const AdminAddComp = () => {
   const classes = useStyles();
   const dispatch = useDispatch();
   const selector = useSelector((state) => state);
@@ -30,11 +30,8 @@ export const EditComp = () => {
     <Container maxWidth="sm" spacing={3}>
       <Grid container spacing={3}>
         <Grid item xs={12} sm={8}>
-          <div className={classes.text}>更新が完了しました</div>
-          <BackButton
-            onClick={() => dispatch(push("/adminMenu"))}
-            label="戻る"
-          />
+          <div className={classes.text}>登録が完了しました</div>
+          <BackButton onClick={() => dispatch(push("/adminMenu"))} label="戻る" />
         </Grid>
       </Grid>
     </Container>

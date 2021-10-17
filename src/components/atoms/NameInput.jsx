@@ -7,7 +7,7 @@ export const NameInput = (props) => {
       id="input"
       name="input"
       label="名前"
-      autoComplete="shipping address-line1"
+      autoComplete="off"
       value={props.name}
       onChange={props.onChange}
       variant="outlined"

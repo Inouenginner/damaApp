@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export const Top = () => {
+export const SignIn = () => {
   const classes = useStyles();
   const dispatch = useDispatch();
 
@@ -46,25 +46,16 @@ export const Top = () => {
           <h1>ログイン画面</h1>
         </Grid>
         <Grid item xs={12} sm={8}>
-          <div className={classes.text}>
-            ・登録したニックネームとパスワードを入力してください
-          </div>
+          <div className={classes.text}>・登録したニックネームとパスワードを入力してください</div>
         </Grid>
         <Grid item xs={12} sm={8}>
           <NameInput name={name} onChange={nameChange} />
         </Grid>
         <Grid item xs={12} sm={8}>
-          <PasswordInput
-            placeholder={"パスワード"}
-            name={password}
-            onChange={passwordChange}
-          />
+          <PasswordInput placeholder={"パスワード"} name={password} onChange={passwordChange} />
         </Grid>
         <Grid item xs={12} sm={8}>
-          <LoginButton
-            label="kendamastart"
-            onClick={() => dispatch(login(name, password))}
-          />
+          <LoginButton label="kendamastart" onClick={() => dispatch(login(name, password))} />
         </Grid>
         <Grid item xs={12} sm={8}>
           <Link component={RouterLink} to="/signup">

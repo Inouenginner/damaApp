@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from "react";
 import { useDispatch } from "react-redux";
-import { adLogin } from "../../reducks/wazas/operations";
+import { adLogin } from "../../reducks/users/operations";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import { NameInput } from "../atoms/NameInput";
@@ -49,10 +49,7 @@ export const Admin = () => {
           <PasswordInput name={password} onChange={passwordChange} />
         </Grid>
         <Grid item xs={12} sm={8}>
-          <LoginButton
-            label="管理者ログイン"
-            onClick={() => dispatch(adLogin(name, password))}
-          />
+          <LoginButton label="管理者ログイン" onClick={() => dispatch(adLogin(name, password))} />
         </Grid>
       </Grid>
     </Container>

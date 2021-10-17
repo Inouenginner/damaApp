@@ -8,7 +8,7 @@ export const MemoInput = (props) => {
       name="memo"
       label="メモ"
       fullWidth
-      autoComplete="shipping address-line1"
+      autoComplete="off"
       defaultValue={props.defaultValue}
       onChange={props.onChange}
       variant="outlined"

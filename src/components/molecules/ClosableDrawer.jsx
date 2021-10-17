@@ -44,15 +44,15 @@ export const ClosableDrawer = (props) => {
   const [filters] = useState([
     {
       func: selectMenu,
-      label: "問い合わせ（作成中）",
+      label: "問い合わせ（作成中。成績一覧画面へ遷移します）",
       id: "inquiry",
-      value: "/inquiry",
+      value: "/record",
     },
     {
       func: selectMenu,
-      label: "作者プロフィール（作成中）",
+      label: "作者プロフィール（作成中。成績一覧画面へ遷移します）",
       id: "author",
-      value: "/author",
+      value: "/record",
     },
   ]);
   const menus = [
@@ -83,19 +83,12 @@ export const ClosableDrawer = (props) => {
         classes={{ paper: classes.drawerPaper }}
         ModalProps={{ keepMounted: true }}
       >
-        <div
-          onClose={(e) => props.onClose(e)}
-          onKeyDown={(e) => props.onClose(e)}
-        >
+        <div onClose={(e) => props.onClose(e)} onKeyDown={(e) => props.onClose(e)}>
           <Divider />
           {isSignedIn && (
             <List>
               {menus.map((menu) => (
-                <ListItem
-                  button
-                  key={menu.id}
-                  onClick={(e) => menu.func(e, menu.value)}
-                >
+                <ListItem button key={menu.id} onClick={(e) => menu.func(e, menu.value)}>
                   <ListItemIcon>{menu.icon}</ListItemIcon>
                   <ListItemText primary={menu.label} />
                 </ListItem>
@@ -111,11 +104,7 @@ export const ClosableDrawer = (props) => {
           <Divider />
           <List>
             {filters.map((filter) => (
-              <ListItem
-                button
-                key={filter.id}
-                onClick={(e) => filter.func(e, filter.value)}
-              >
+              <ListItem button key={filter.id} onClick={(e) => filter.func(e, filter.value)}>
                 <ListItemText primary={filter.label} />
               </ListItem>
             ))}

@@ -3,30 +3,12 @@ import TextField from "@material-ui/core/TextField";
 import MenuItem from "@material-ui/core/MenuItem";
 
 const options = [
-  {
-    value: "0",
-    label: "できない",
-  },
-  {
-    value: "1",
-    label: "一回できた",
-  },
-  {
-    value: "2",
-    label: "5回くらいできた",
-  },
-  {
-    value: "3",
-    label: "半分の確率でできる",
-  },
-  {
-    value: "4",
-    label: "ほぼできる",
-  },
-  {
-    value: "5",
-    label: "完璧",
-  },
+  { value: "0", label: "できない" },
+  { value: "1", label: "一回できた" },
+  { value: "2", label: "5回くらいできた" },
+  { value: "3", label: "半分の確率でできる" },
+  { value: "4", label: "ほぼできる" },
+  { value: "5", label: "完璧" },
 ];
 
 export const AchieveSelectBox = (props) => {

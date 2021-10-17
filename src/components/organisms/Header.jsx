@@ -56,10 +56,7 @@ export const Header = () => {
   const [open, setOpen] = useState(false);
   const handleDrawerToggle = useCallback(
     (event) => {
-      if (
-        event.type === "keydown" &&
-        (event.key === "Tab" || event.key === "Shift")
-      ) {
+      if (event.type === "keydown" && (event.key === "Tab" || event.key === "Shift")) {
         return;
       }
       setOpen(!open);
@@ -74,7 +71,7 @@ export const Header = () => {
           <div className={classes.iconButtons}>
             <HeaderMenus handleDrawerToggle={handleDrawerToggle} />
           </div>
-          <Typography className={classes.title} variant="h6" noWrap>
+          <Typography className={classes.title} variant="h6">
             てるからの挑戦状
           </Typography>
           <div className={classes.grow} />

@@ -68,7 +68,6 @@ export const WazaDetail = () => {
     setMemo(newTargetWaza.memo);
     setFavorite(newTargetWaza.favorite);
     console.log("render!");
-    console.log(newTargetWaza.achieve);
     //eslint-disable-next-line
   }, [wazaId]);
 
@@ -76,6 +75,7 @@ export const WazaDetail = () => {
     (achieve, memo, favorite, wazaId, userId, nextPath) => {
       dispatch(updateDetail(achieve, memo, favorite, wazaId, userId, nextPath));
     },
+    // eslint-disable-next-line
     [wazaId]
   );
 
@@ -127,19 +127,13 @@ export const WazaDetail = () => {
         </Typography>
         <Grid container spacing={3}>
           <Grid item xs={12} sm={8}>
-            <AchieveSelectBox
-              defaultValue={targetWaza.achieve}
-              select={setAchieve}
-            />
+            <AchieveSelectBox defaultValue={targetWaza.achieve} select={setAchieve} />
           </Grid>
           <Grid item xs={12}>
             <MemoInput defaultValue={targetWaza.memo} onChange={memoChange} />
           </Grid>
           <Grid item xs={12}>
-            <FavoriteCheckBox
-              defaultChecked={targetWaza.favorite}
-              onChange={handleCheckboxClick}
-            />
+            <FavoriteCheckBox defaultChecked={targetWaza.favorite} onChange={handleCheckboxClick} />
           </Grid>
           <Grid item>
             <div>
@@ -156,15 +150,8 @@ export const WazaDetail = () => {
             </div>
           </Grid>
           <Grid item xs={12}>
-            <BackButton
-              onClick={() => dispatch(push("/record"))}
-              label="戻る"
-            />
-            <UpdateButton
-              onClick={() =>
-                goNextPage(achieve, memo, favorite, wazaId, userId, "/record")
-              }
-            />
+            <BackButton onClick={() => dispatch(push("/record"))} label="戻る" />
+            <UpdateButton onClick={() => goNextPage(achieve, memo, favorite, wazaId, userId, "/record")} />
           </Grid>
         </Grid>
       </Container>
