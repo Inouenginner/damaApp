@@ -60,7 +60,7 @@ export const editWaza = (wazaId, wazaName, wazaLevel, wazaUrl) => {
   };
 };
 
-//管理者画面からの技の登録（アプリ立ち上げ時に一度読み込むイメージ,ローカルでdb.jsonの立ち上げ必要）
+//管理者画面からの技の登録（アプリリリース時に一度読み込むイメージ,ローカルでdb.jsonの立ち上げ必要）
 export const wazaRegist = () => {
   return async (dispatch) => {
     let wazas;
@@ -142,12 +142,27 @@ export const signUp = (name, password) => {
       const timestamp = FirebaseTimestamp.now();
       let batch = db.batch();
       const userStandardRef = userRef.doc(userId.toString());
-      batch.set(userStandardRef, { id: userId, password: hashPass, name: name, registerDate: timestamp, role: "user" });
+      batch.set(userStandardRef, {
+        id: userId,
+        password: hashPass,
+        name: name,
+        registerDate: timestamp,
+        role: "user",
+      });
       // ユーザごとの各技達成度等詳細DB登録（処理速度最速while文使用）
       let index = 1;
       while (index <= wazaSum) {
-        let detailsEachRef = userRef.doc(userId.toString()).collection("results").doc(index.toString());
-        batch.set(detailsEachRef, { id: index, achieve: 0, memo: "", favorite: false, makeDay: timestamp });
+        let detailsEachRef = userRef
+          .doc(userId.toString())
+          .collection("results")
+          .doc(index.toString());
+        batch.set(detailsEachRef, {
+          id: index,
+          achieve: 0,
+          memo: "",
+          favorite: false,
+          makeDay: timestamp,
+        });
         index++;
       }
       // バッチ処理の完了
@@ -172,7 +187,12 @@ export const signUp = (name, password) => {
     const detailsDocsOrderById = await detailsRef.orderBy("id", "asc").get();
     detailsDocsOrderById.forEach((detailsDocOrderById) => {
       if (detailsDocOrderById.exists) {
-        joinedList.push(Object.assign(userWazaList[detailsDocOrderById.data()["id"] - 1], detailsDocOrderById.data()));
+        joinedList.push(
+          Object.assign(
+            userWazaList[detailsDocOrderById.data()["id"] - 1],
+            detailsDocOrderById.data()
+          )
+        );
       }
     });
     dispatch(fetchWazasAction(userWazaList));
@@ -267,7 +287,10 @@ export const login = (name, password) => {
     const detailsDocsOrderById = await detailsRef.orderBy("id", "asc").get();
     detailsDocsOrderById.forEach((detailsDocOrderById) => {
       if (detailsDocOrderById.exists) {
-        Object.assign(userWazaList[detailsDocOrderById.data()["id"] - 1], detailsDocOrderById.data());
+        Object.assign(
+          userWazaList[detailsDocOrderById.data()["id"] - 1],
+          detailsDocOrderById.data()
+        );
       }
     });
     dispatch(fetchWazasAction(userWazaList));
