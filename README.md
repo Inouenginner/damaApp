@@ -8,7 +8,7 @@
 
 # URL
 
-https://kendama-app.web.app
+https://kendama-app.web.app  
 https://kendama-app.web.app/admin
 
 # テスト用アカウント
