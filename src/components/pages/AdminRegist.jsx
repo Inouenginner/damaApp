@@ -17,9 +17,14 @@ export const AdminRegist = () => {
     return <div className="center">管理者ログインしてください</div>;
   }
   return (
-    <Grid item xs={12} sm={8}>
-      <TransitionButton onClick={() => dispatch(push("/adminMenu"))} label="戻る" />
-      <UpdateButton onClick={() => dispatch(wazaRegist())} />
-    </Grid>
+    <>
+      <Grid item xs={12} sm={8}>
+        <div className="red-text">・全ての技を登録します。よろしいでしょうか？</div>
+      </Grid>
+      <Grid item xs={12} sm={8}>
+        <TransitionButton onClick={() => dispatch(push("/adminMenu"))} label="戻る" />
+        <UpdateButton onClick={() => dispatch(wazaRegist())} />
+      </Grid>
+    </>
   );
 };
