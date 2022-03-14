@@ -27,7 +27,7 @@ export const Admin = () => {
   return (
     <>
       <Grid item xs={12} sm={8}>
-        <div className="red-text">管理者画面</div>
+        <h1>管理者画面</h1>
       </Grid>
       <Grid item xs={12} sm={8}>
         <NameInput name={name} onChange={nameChange} />
